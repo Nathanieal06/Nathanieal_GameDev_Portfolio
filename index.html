@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nathanieal Sandipurti — Game Developer Portfolio. Explore my games, projects, and highlights.">
+  <meta name="keywords" content="Portfolio, Game Developer, GameDev, Nathanieal Sandipurti">
+  <meta name="author" content="Nathanieal Sandipurti">
+  <meta content="#0c0c0c" name="theme-color">
+
+  <meta property="og:title" content="Nathanieal Sandipurti — Game Developer">
+  <meta property="og:description" content="I'm a Game Developer! Explore my portfolio.">
+  <meta property="og:type" content="website">
+
+  <title>Nathanieal Sandipurti | Game Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="#" class="nav-link active" id="nav-home">Home</a>
+      <a href="#highlights" class="nav-link" id="nav-highlights">Highlights</a>
+      <a href="#about" class="nav-link" id="nav-about">About</a>
+      <a href="pages/games.html" class="nav-link" id="nav-games">Games</a>
+      <a href="pages/projects.html" class="nav-link" id="nav-projects">Projects</a>
+            <div class="nav-dropdown">
+        <a class="nav-link">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="pages/resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="pages/academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="pages/studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="pages/contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-video">
+      <video id="hero-vid" autoplay muted loop playsinline>
+        <source src="Video/HomePage.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-greeting">Hi, I am</p>
+      <h1 class="hero-name">Nathanieal<br><em>Sandipurti</em></h1>
+      <p class="hero-role">Game Developer</p>
+      <div class="hero-actions">
+        <a href="pages/games.html" class="btn btn--primary" id="btn-games">View Games</a>
+        <a href="pages/projects.html" class="btn btn--ghost" id="btn-projects">Projects</a>
+      </div>
+    </div>
+    <div class="hero-scroll" id="scroll-indicator">
+      <div class="hero-scroll__line"></div>
+    </div>
+  </section>
+
+  <!-- ========== HIGHLIGHTS ========== -->
+  <section class="highlights" id="highlights">
+    <div class="container">
+      <div class="card-grid">
+
+        <!-- Legacy of Dharma -->
+        <article class="card" id="card-1">
+          <div class="card__body">
+            <h3 class="card__title">Legacy of Dharma</h3>
+            <p class="card__desc">An upcoming game project. Stay tuned for more details and gameplay footage.</p>
+            <div class="card__meta">
+              <span class="card__dev">Developed by: <strong>Nathanieal Sandipurti</strong></span>
+              <span class="card__date">Present</span>
+            </div>
+          </div>
+          <div class="card__visual">
+            <img src="assets/images/games/legacy-of-dharma/Legacy of Dharma (1).png" alt="Legacy of Dharma" loading="lazy">
+            <a href="pages/games/legacy-of-dharma.html" class="card__read-more">Read More</a>
+          </div>
+        </article>
+
+        <!-- Echo The Paradox -->
+        <article class="card" id="card-2">
+          <div class="card__body">
+            <h3 class="card__title">Echo The Paradox</h3>
+            <p class="card__desc">A cinematic game experience exploring paradoxes and echoes through immersive gameplay. I'm building this using Unity, focusing on atmospheric storytelling.</p>
+            <div class="card__meta">
+              <span class="card__dev">Developed by: <strong>Nathanieal Sandipurti</strong></span>
+              <span class="card__date" style="text-align: right;">S.T.E.M Jam<br><span style="font-size: 0.85em; opacity: 0.8;">by GameDev Club IIT Guwahati</span></span>
+            </div>
+          </div>
+          <div class="card__visual">
+            <img src="assets/images/games/Echo The Paradox/Echo The Paradox (1).png" alt="Echo The Paradox" loading="lazy">
+            <a href="pages/games/echo-the-paradox.html" class="card__read-more">Read More</a>
+          </div>
+        </article>
+
+        <!-- LastStride -->
+        <article class="card" id="card-3">
+          <div class="card__body">
+            <h3 class="card__title">LastStride</h3>
+            <p class="card__desc">A gripping survival game where every stride could be your last. Created entirely from scratch, putting player choices at the forefront of the experience.</p>
+            <div class="card__meta">
+              <span class="card__dev">Developed by: <strong>Nathanieal Sandipurti</strong></span>
+              <span class="card__date" style="text-align: right;">Indie Connect Game Jam #1 – The Beginning<br><span style="font-size: 0.85em; opacity: 0.8;">by GDAI Game Connect</span></span>
+            </div>
+          </div>
+          <div class="card__visual">
+            <img src="assets/images/games/LastStride/Last Stride (1).png" alt="LastStride" loading="lazy">
+            <a href="pages/games/last-stride.html" class="card__read-more">Read More</a>
+          </div>
+        </article>
+
+
+      </div>
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="pages/games.html" class="btn btn--ghost">Other Games</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ME ========== -->
+  <section class="about" id="about">
+    <div class="about__panel">
+      <div class="container about-container-wide">
+        <div class="about__grid">
+        <div class="about__photo">
+          <div class="about__avatar" id="about-avatar">
+            <img src="assets/images/profile/profile.jpg" alt="Nathanieal Sandipurti" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
+          </div>
+        </div>
+        <div class="about__info">
+          <p class="about__bio" style="margin-top: 1rem;">
+            <i>Greetings, I'm Nathanieal Sandipurti, a self-taught game programmer and Unity developer. To me, games are like movies except the audience gets to grab the wheel. Instead of just watching a story unfold, you get to control the protagonist's choices and rewrite their destiny with every decision.
+            I've sharpened my skills through 3 game jams, built 10+ Unity projects, and published 3 games so far. Each one has taught me something new about mechanics, storytelling, and what makes a player actually feel the choices they make.
+            Right now, I'm working toward my biggest goal yet: creating a full choice-based story game one where every decision genuinely branches the narrative and makes players feel like the author of their own journey.</i>
+          </p>
+          <div class="about__badges">
+            <span class="badge"><i class="fas fa-gamepad"></i> Unity Developer</span>
+            <!-- <span class="badge"><i class="fas fa-cube"></i> Unreal Engine</span> -->
+            <span class="badge"><i class="fas fa-code"></i> C# / C++</span>
+            <!--<span class="badge"><i class="fas fa-paint-brush"></i> 3D Modeling</span>
+            <span class="badge"><i class="fas fa-film"></i> Cinematics</span>-->
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="container">
+      <div class="about__cta" style="justify-content: center; margin-top: 3rem; margin-bottom: 3rem;">
+        <a href="mailto:nathasandipurti@gmail.com" class="btn btn--primary" id="btn-email">
+          <i class="fas fa-envelope"></i> Send Me an Email
+        </a>
+        <a href="https://www.linkedin.com/in/nathanieal-sandipurti" target="_blank" class="btn btn--ghost" id="btn-linkedin">
+          <i class="fab fa-linkedin-in"></i> Connect on LinkedIn
+        </a>
+      </div>
+      <div class="about__find">
+        <p class="about__find-label">You can also find me here...</p>
+        <div class="about__find-links">
+          <a href="https://www.linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn" id="find-linkedin"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub" id="find-github"><i class="fab fa-github"></i></a>
+          <a href="https://www.youtube.com/@Nathanieal06" target="_blank" aria-label="YouTube" id="find-youtube"><i class="fab fa-youtube"></i></a>
+          <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io" id="find-itchio"><i class="fab fa-itch-io"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub" id="social-github"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn" id="social-linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Twitter" id="social-twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io" id="social-itchio"><i class="fab fa-itch-io"></i></a>
+      </div>
+      <p class="footer__copy">&copy; 2026 Nathanieal Sandipurti</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

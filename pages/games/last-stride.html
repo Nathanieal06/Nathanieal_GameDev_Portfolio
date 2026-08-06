@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LastStride - A Game by Nathanieal Sandipurti">
+  <meta name="theme-color" content="#0c0c0c">
+  <title>LastStride | Nathanieal Sandipurti</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="../../index.html" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../../index.html#home" class="nav-link">Home</a>
+      <a href="../../index.html#highlights" class="nav-link">Highlights</a>
+      <a href="../../index.html#about" class="nav-link">About</a>
+      <a href="../games.html" class="nav-link active">Games</a>
+      <a href="../../index.html#projects" class="nav-link">Projects</a>
+            <div class="nav-dropdown">
+        <a class="nav-link">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="../resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="../academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="../studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="../contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="game-hero" style="background-image: url('../../assets/images/games/LastStride/Last Stride (1).png'); background-color: #2c1a35;">
+    <div class="game-hero-content">
+      <a href="../games.html" style="position: fixed; top: 90px; right: 20px; z-index: 999; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.2rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); text-decoration: none; font-size: 0.9rem; color: #fff; transition: background 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.3);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.5)'"><i class="fas fa-arrow-left"></i> Back to Games</a>
+      <h1 class="game-hero-title">LastStride</h1>
+      <div class="game-hero-tags">
+        <span class="amy-card-tag">Unity</span>
+        <span class="amy-card-tag">C#</span>
+        <span class="amy-card-tag">Endless Runner</span>
+      </div>
+      <div class="game-hero-links">
+        <a href="https://nathanieal.itch.io/infinite-runner" target="_blank"><i class="fas fa-play"></i> Play Now</a>
+        <a href="https://github.com/Nathanieal06/LastStride" class="secondary-link" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== QUICK FACTS ========== -->
+  <section class="game-quick-facts">
+    <div class="game-quick-facts-inner">
+      <div class="game-fact">
+        <span class="game-fact-label">Role</span>
+        <span class="game-fact-value">Sole Developer</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Team Size</span>
+        <span class="game-fact-value">1</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Engine</span>
+        <span class="game-fact-value">Unity 6 (6000.3.11f1)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Platform</span>
+        <span class="game-fact-value">PC (Windows)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Status</span>
+        <span class="game-fact-value">Completed</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Game Jam</span>
+        <span class="game-fact-value">Indie Connect Game Jam #1 (GDAI Game Connect)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OVERVIEW & CONTRIBUTION ========== -->
+  <section class="game-section">
+    <h2>Overview</h2>
+    <p>
+      LastStride is an endless runner featuring procedural chunk-based level generation, multiple obstacle types, distinct biomes with per-biome background music, boss encounters, and increasing speed difficulty scaling over time.
+    </p>
+
+    <h2>Your Contribution</h2>
+    <p>
+      I built the game's core architecture and procedural generation systems:
+    </p>
+    <ul>
+      <li><strong>Procedural Level Generator:</strong> Designed a chunk lifecycle system where chunks scroll toward the player and respawn seamlessly. Transitions handle biomes, speed scaling, and boss encounters.</li>
+      <li><strong>Chunk System & Lane Safety:</strong> Implemented self-contained level segments that spawn obstacles randomly but safely across 3 lanes, ensuring impossible configurations are mathematically prevented.</li>
+      <li><strong>Boss Fight System:</strong> Developed a boss encounter that moves alongside the world and uses a laser attack to clear chunk obstacles in real-time.</li>
+      <li><strong>Audio & Memory Management:</strong> Built an audio manager that preloads all biome BGM clips into RAM at startup to eliminate mid-run disk I/O and lag spikes during transitions.</li>
+      <li><strong>Player Controller:</strong> Programmed a 3-lane movement system with smooth lerp-based lane switching, jumping, sprint, and collision responses.</li>
+    </ul>
+  </section>
+
+  <!-- ========== MEDIA GALLERY ========== -->
+  <section class="game-section">
+    <h2>Media & Iteration</h2>
+    <div class="game-media-grid">
+      <img src="../../assets/images/games/LastStride/Last Stride (1).png" alt="LastStride Cover" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/LastStride/Last Stride (2).png" alt="Screenshot 1" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/LastStride/Last Stride (3).png" alt="Screenshot 2" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/LastStride/Last Stride (4).png" alt="Screenshot 3" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/LastStride/Last Stride (5).png" alt="Screenshot 4" style="width:100%; border-radius:8px;">
+      <div style="grid-column: 1 / -1; width: 100%; aspect-ratio: 16/9; margin-top: 1rem;">
+        <iframe width="100%" height="100%" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);" src="https://www.youtube.com/embed/y_pqpkjO_Rw" title="LastStride Gameplay Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECHNICAL DEEP DIVE ========== -->
+  <section class="game-section">
+    <h2>Technical Deep-Dive</h2>
+    <h3>Biome-Based Proc-Gen with BGM Preloading</h3>
+    <p>
+      An infinite runner needs variety across long sessions. Biome transitions must change music without causing lag spikes from loading audio mid-run. To solve this, all biome BGM clips are preloaded into RAM on <code>Start()</code>. Biome transitions are triggered by chunk count intervals. This deliberate performance optimization ensures a perfectly smooth player experience.
+    </p>
+    <pre style="background: #111; padding: 1rem; border-radius: 4px; overflow-x: auto; color: #569cd6; font-family: monospace;">
+// LevelGenerator.cs — Preloading all biome BGM at startup
+// "Preload all biome BGM clips into RAM at startup so biome transitions cause zero lag"
+AudioClip[] allClips = new AudioClip[biomes.Length];
+for (int i = 0; i < biomes.Length; i++) allClips[i] = biomes[i].bgmClip;
+AudioManager.Instance.PreloadClips(allClips);
+    </pre>
+
+    <h3 style="margin-top: 2rem;">Lane-Safe Obstacle Spawning</h3>
+    <p>
+      Random lane selection can produce impossible configurations where all 3 lanes are blocked simultaneously. The solution uses an <code>availableLanes</code> list that starts as <code>[0, 1, 2]</code>. Each call to <code>SelectLane()</code> removes the chosen index from the list, guaranteeing no lane is used twice per chunk to ensure the player always has an out.
+    </p>
+    <pre style="background: #111; padding: 1rem; border-radius: 4px; overflow-x: auto; color: #569cd6; font-family: monospace;">
+List&lt;int&gt; availableLanes = new List&lt;int&gt; { 0, 1, 2 };
+int SelectLane() {
+    int idx  = Random.Range(0, availableLanes.Count);
+    int lane = availableLanes[idx];
+    availableLanes.RemoveAt(idx);
+    return lane;
+}
+    </pre>
+  </section>
+
+  <!-- ========== POSTMORTEM ========== -->
+  <section class="game-section">
+    <h2>Postmortem / Lessons Learned</h2>
+    
+    <h3>What went well</h3>
+    <ul>
+      <li><strong>The lane-safety system solved a real fairness problem cleanly.</strong> Using a shrinking <code>availableLanes</code> list to prevent impossible obstacles was simple to implement and worked perfectly — players always have at least one safe lane available.</li>
+      <li><strong>BGM preloading eliminated all biome transition lag.</strong> Deliberately preloading all audio clips at startup rather than loading on biome change removed what would have been a noticeable stutter during intense gameplay — a small decision with a big player-experience payoff.</li>
+    </ul>
+
+    <h3>What I'd do differently</h3>
+    <ul>
+      <li><strong>Use an object pool for chunks instead of Instantiate/Destroy.</strong> Instantiating and destroying chunks each cycle creates GC pressure. A proper object pool (reuse inactive chunks) would be cleaner, especially if expanding to mobile where memory management matters more.</li>
+      <li><strong>Design the biome system data-first with ScriptableObjects.</strong> The current <code>Biome</code> struct is configured in the inspector. Using ScriptableObject assets would make adding new biomes (new chunk prefabs, music, obstacles) a pure content task with no code changes.</li>
+    </ul>
+  </section>
+
+  <!-- ========== LINKS & CREDITS ========== -->
+  <section class="game-section">
+    <h2>Links & Credits</h2>
+    <ul class="game-credits">
+      <li><strong>Nathanieal Sandipurti:</strong> Sole Developer</li>
+      <li><strong>Third-Party Assets:</strong> DungeonCharacters, AllSkyFree, Layer Lab</li>
+      <li><strong>Source Code:</strong> <a href="https://github.com/Nathanieal06/LastStride" target="_blank" style="color: #4da6ff; text-decoration: underline; text-underline-offset: 3px;">GitHub Repository</a></li>
+    </ul>
+  </section>
+  <!-- ========== PAGINATION ========== -->
+  <div class="amy-pagination-container">
+    <a href="echo-the-paradox.html" class="amy-pagination-link prev">
+      <i class="fas fa-arrow-left"></i>
+      <div>
+        <span class="amy-pagination-link-subtitle">Previous</span>
+        <span class="amy-pagination-link-title">Echo The Paradox</span>
+      </div>
+    </a>
+    <a href="sih-village-map.html" class="amy-pagination-link next">
+      <div>
+        <span class="amy-pagination-link-subtitle">Next</span>
+        <span class="amy-pagination-link-title">SIH Village Map</span>
+      </div>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer" style="margin-top: 5rem;">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

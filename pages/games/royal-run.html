@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Royal Run - A Game by Nathanieal Sandipurti">
+  <meta name="theme-color" content="#0c0c0c">
+  <title>Royal Run | Nathanieal Sandipurti</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="../../index.html" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../../index.html#home" class="nav-link">Home</a>
+      <a href="../../index.html#highlights" class="nav-link">Highlights</a>
+      <a href="../../index.html#about" class="nav-link">About</a>
+      <a href="../games.html" class="nav-link active">Games</a>
+      <a href="../../index.html#projects" class="nav-link">Projects</a>
+            <div class="nav-dropdown">
+        <a class="nav-link">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="../resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="../academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="../studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="../contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="game-hero" style="background-image: url('../../assets/images/games/Royal Run/Royal_Run_1.png'); background-color: #1c1c1c;">
+    <div class="game-hero-content">
+      <a href="../games.html" style="position: fixed; top: 90px; right: 20px; z-index: 999; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.2rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); text-decoration: none; font-size: 0.9rem; color: #fff; transition: background 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.3);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.5)'"><i class="fas fa-arrow-left"></i> Back to Games</a>
+      <h1 class="game-hero-title">Royal Run</h1>
+      <div class="game-hero-tags">
+        <span class="amy-card-tag">Unity</span>
+        <span class="amy-card-tag">C#</span>
+        <span class="amy-card-tag">Endless Runner</span>
+      </div>
+      <div class="game-hero-links">
+        <a href="https://nathanieal.itch.io/royalrun" target="_blank"><i class="fas fa-play"></i> Play Now</a>
+        <a href="https://github.com/Nathanieal06/Royal_Run" class="secondary-link" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== QUICK FACTS ========== -->
+  <section class="game-quick-facts">
+    <div class="game-quick-facts-inner">
+      <div class="game-fact">
+        <span class="game-fact-label">Role</span>
+        <span class="game-fact-value">Sole Developer</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Team Size</span>
+        <span class="game-fact-value">1</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Duration</span>
+        <span class="game-fact-value">Game Jam</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Engine</span>
+        <span class="game-fact-value">Unity 6 (6000.3.11f1)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Platform</span>
+        <span class="game-fact-value">PC (Windows)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Status</span>
+        <span class="game-fact-value">Completed Prototype</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OVERVIEW & CONTRIBUTION ========== -->
+  <section class="game-section">
+    <h2>Overview</h2>
+    <p>
+      Royal Run is a 3D endless runner and an earlier predecessor to the LastStride project. The player character runs forward automatically through procedurally generated chunks, dodges obstacles across 3 lanes, collects coins and apples, and survives as long as possible.
+    </p>
+
+    <h2>Your Contribution</h2>
+    <p>
+      I built the foundational endless runner framework that would later scale into LastStride:
+    </p>
+    <ul>
+      <li><strong>Player Controller (Runner):</strong> Built automatic forward movement with 3-lane switching, jump capabilities, and rigid collision handling. Integrated a CameraController to reliably trail the player.</li>
+      <li><strong>Procedural Level Generator:</strong> Managed an endless chunk lifecycle, generating fixed-length level segments ahead of the player and destroying passed ones behind to conserve memory.</li>
+      <li><strong>Base Class Pickup Inheritance:</strong> Used inheritance logic for collectibles (Coins, Apples) to share trigger overlap behaviors but branch off unique score/reward logic.</li>
+      <li><strong>Checkpoint System:</strong> Designed checkpoints to mark progress milestones in the run.</li>
+    </ul>
+  </section>
+
+  <!-- ========== MEDIA GALLERY ========== -->
+  <section class="game-section">
+    <h2>Media & Iteration</h2>
+    <div class="game-media-grid">
+      <img src="../../assets/images/games/Royal Run/Royal_Run_1.png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Royal Run/Royal_Run_2.png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Royal Run/Royal_Run_3.png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Royal Run/Royal_Run_4.png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <div style="grid-column: 1 / -1; width: 100%; aspect-ratio: 16/9;">
+        <iframe width="100%" height="100%" style="border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);" src="https://www.youtube.com/embed/UpbTMROEQDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+    </section>
+
+  <!-- ========== TECHNICAL DEEP DIVE ========== -->
+  <section class="game-section">
+    <h2>Technical Deep-Dive</h2>
+    <h3>Chunk-Based Infinite World</h3>
+    <p>
+      An endless runner needs an infinite world without consuming infinite memory. The <code>LevelGenerator</code> maintains a sliding window of active chunks. As the player passes each chunk, it's destroyed and a new one spawns ahead. Fixed chunk length ensures consistent density.
+    </p>
+
+    <h3 style="margin-top: 2rem;">Physics Material for Runner Feel</h3>
+    <p>
+      Custom <code>PhysicsMaterial</code> assets with configurable <code>dynamicFriction</code>, <code>staticFriction</code>, and <code>bounciness</code> were applied to the ground and player collider for precise physical feel tuning, massively improving the snappiness of the lane switches compared to default Unity physics values.
+    </p>
+
+    <h3 style="margin-top: 2rem;">Base Class Pickup Inheritance</h3>
+    <p>
+      Coins and apples share the same "player walks through → reward" logic but differ in what reward they grant. The <code>Pickup</code> base class handles the trigger detection and player reference lookup. <code>Coin</code> and <code>Apple</code> extend it and override only the reward logic — yielding zero code duplication.
+    </p>
+  </section>
+
+  <!-- ========== POSTMORTEM ========== -->
+  <section class="game-section">
+    <h2>Postmortem / Lessons Learned</h2>
+    
+    <h3>What went well</h3>
+    <ul>
+      <li><strong>Infinite generation:</strong> The chunk-based generation works seamlessly and without lag spikes, providing a true endless experience.</li>
+      <li><strong>Code organization:</strong> Utilizing inheritance for pickups kept the codebase small and extensible.</li>
+    </ul>
+
+    <h3>What I'd do differently</h3>
+    <ul>
+      <li><strong>Procedural curves:</strong> The path is perfectly straight. Adding slight curves or verticality to the chunks would make the endless runner feel more dynamic.</li>
+    </ul>
+  </section>
+
+  <!-- ========== LINKS & CREDITS ========== -->
+  <section class="game-section">
+    <h2>Links & Credits</h2>
+    <ul class="game-credits">
+      <li><strong>Nathanieal Sandipurti:</strong> Sole Developer</li>
+      <li><strong>Source Code:</strong> <a target="_blank" href="https://github.com/Nathanieal06/Royal_Run" style="color: #4da6ff; text-decoration: underline; text-underline-offset: 3px;">[GitHub Link]</a></li>
+    </ul>
+  </section>
+  <!-- ========== PAGINATION ========== -->
+  <div class="amy-pagination-container">
+    <a href="sharp-shooter.html" class="amy-pagination-link prev">
+      <i class="fas fa-arrow-left"></i>
+      <div>
+        <span class="amy-pagination-link-subtitle">Previous</span>
+        <span class="amy-pagination-link-title">Sharp Shooter</span>
+      </div>
+    </a>
+    <a href="galaxy-strike.html" class="amy-pagination-link next">
+      <div>
+        <span class="amy-pagination-link-subtitle">Next</span>
+        <span class="amy-pagination-link-title">Galaxy Strike</span>
+      </div>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer" style="margin-top: 5rem;">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

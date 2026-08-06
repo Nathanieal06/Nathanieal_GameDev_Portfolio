@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zatun Zombie Game - A Game by Nathanieal Sandipurti">
+  <meta name="theme-color" content="#0c0c0c">
+  <title>Zatun Zombie Game | Nathanieal Sandipurti</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="../../index.html" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../../index.html#home" class="nav-link">Home</a>
+      <a href="../../index.html#highlights" class="nav-link">Highlights</a>
+      <a href="../../index.html#about" class="nav-link">About</a>
+      <a href="../games.html" class="nav-link active">Games</a>
+      <a href="../../index.html#projects" class="nav-link">Projects</a>
+            <div class="nav-dropdown">
+        <a class="nav-link">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="../resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="../academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="../studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="../contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="game-hero" style="background-image: url('../../assets/images/games/Zatun Zombie Game/Zombie_Gamplay (1).png'); background-color: #1c1c1c;">
+    <div class="game-hero-content">
+      <a href="../games.html" style="position: fixed; top: 90px; right: 20px; z-index: 999; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.2rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); text-decoration: none; font-size: 0.9rem; color: #fff; transition: background 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.3);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.5)'"><i class="fas fa-arrow-left"></i> Back to Games</a>
+      <h1 class="game-hero-title">Zatun Zombie Game</h1>
+      <div class="game-hero-tags">
+        <span class="amy-card-tag">Unity 6</span>
+        <span class="amy-card-tag">URP</span>
+        <span class="amy-card-tag">C#</span>
+      </div>
+      <div class="game-hero-links">
+        
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== QUICK FACTS ========== -->
+  <section class="game-quick-facts">
+    <div class="game-quick-facts-inner">
+      <div class="game-fact">
+        <span class="game-fact-label">Role</span>
+        <span class="game-fact-value">Gameplay & Systems Programmer</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Team Size</span>
+        <span class="game-fact-value">1 (Solo Developer)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Duration</span>
+        <span class="game-fact-value">~1 Week</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Engine/Tools</span>
+        <span class="game-fact-value">Unity 6 (LTS), C#</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Platform</span>
+        <span class="game-fact-value">PC (Windows/macOS/Linux)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Status</span>
+        <span class="game-fact-value">Completed Demo</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MY CONTRIBUTION ========== -->
+  <section class="game-section">
+    <h2>My Contribution</h2>
+    <p>
+      As the sole programmer and developer on this technical test, I architected and implemented the entire codebase from scratch using Unity 6.x. Major systems include:
+    </p>
+    <ul>
+      <li><strong>Combat & Equipment System:</strong> A data-driven modular weapon system built on Scriptable Objects (<code>WeaponBase.cs</code>, <code>EquipmentManager.cs</code>). It handles distinct weapon types (Pistol, Rifle, Knife) using a hybrid hitscan-projectile algorithm for perfect hit registration. Architecture relies on C# Events (<code>GameEvents.cs</code>) to decouple combat logic from UI updates.</li>
+      <li><strong>AI & Enemy Director:</strong> NavMesh-based AI (<code>ZombieController.cs</code>, <code>ZombieSpawner.cs</code>) capable of obstacle avoidance and tracking the player. It uses a State-machine approach with Coroutines for throttled decision-making and spawning, drastically reducing CPU overhead in scenes with 100+ enemies.</li>
+      <li><strong>Procedural Animation Rigging:</strong> Handled third-person movement states (walk/sprint/ADS) intertwined with Unity Animation Rigging. Implemented procedural Aim IK, head tracking, and Multi-Parent Constraints to maintain hand-to-weapon consistency dynamically.</li>
+      <li><strong>Dynamic Camera System:</strong> Cinemachine-based state-driven camera (<code>CameraSwitcher.cs</code>) for seamless, weighted transitions between Hip-Fire and Aim-Down-Sights (ADS) field of view and offset configurations.</li>
+    </ul>
+  </section>
+
+  <!-- ========== TECHNICAL DEEP DIVE ========== -->
+  <section class="game-section">
+    <h2>Technical Deep Dive</h2>
+    
+    <h3>1. Hybrid Hitscan-Projectile System</h3>
+    <p><strong>The Problem:</strong> Fast physical projectiles (Rigidbodies) in Unity often suffer from "tunneling" at high framerates, while purely instant hitscans lack satisfying visual feedback.</p>
+    <p><strong>The Approach:</strong> Separated the physics logic from the visual rendering. A hitscan raycast evaluates hit registration and applies damage instantly and 100% reliably. Concurrently, a "Visual Only" physical bullet prefab is launched purely for the player's visual feedback.</p>
+    <p><strong>Why it's Notable:</strong> Delivers the visual immersion of physical ballistics with the zero-latency, competitive-grade reliability of a hitscan weapon.</p>
+    <pre style="background: #111; padding: 1rem; border-radius: 4px; overflow-x: auto; color: #569cd6; font-family: monospace;">
+[Header("Mode")]
+[Tooltip("Enable this only when a separate hitscan ray should handle all damage.")]
+[SerializeField] private bool visualOnly = false;
+
+private void Start() {
+    // Ignore bullet-to-player layer collisions globally at the engine level. 
+    // Bullets never hit the player's own colliders regardless of spawn offset.
+    Physics.IgnoreLayerCollision(bulletLayer, playerLayer, true);
+}
+    </pre>
+
+    <h3>2. SRP Batcher Compatible Dissolve Shader</h3>
+    <p><strong>The Problem:</strong> Standard dissolve effects on dozens of dying zombies break Unity's batching, leading to an explosion of draw calls and CPU bottlenecks.</p>
+    <p><strong>The Approach:</strong> Hand-wrote a custom HLSL URP shader (<code>URP_Dissolve_Texture.shader</code>) strictly utilizing <code>CBUFFER_START(UnityPerMaterial)</code>. Used <code>clip()</code> instead of alpha transparency for Early-Z discard optimization.</p>
+    <p><strong>Why it's Notable:</strong> Maintained full compatibility with the SRP Batcher, allowing Unity to draw dozens of zombies at different dissolve stages in a single batched call.</p>
+
+    <h3>3. Global AI & Physics Throttling</h3>
+    <p><strong>The Problem:</strong> Running distance checks, Line of Sight, and NavMesh calculations for large swarms of zombies every frame in <code>Update()</code> causes massive CPU spikes.</p>
+    <p><strong>The Approach:</strong> Distributed heavy calculations across multiple frames using Coroutines. Additionally, implemented a static global flag <code>IsCutsceneActive</code> that instantly suspends all AI logic globally during menus.</p>
+    <p><strong>Why it's Notable:</strong> Highly scalable architecture that ensures a stable 60+ FPS on mid-range hardware even with over 100 active enemies.</p>
+  </section>
+
+  <!-- ========== AUTOMATION TOOLS ========== -->
+  <section class="game-section">
+    <h2>Automation Tools Pipeline</h2>
+    <p>To streamline development workflows and resolve asset inconsistencies, I developed custom Python utility scripts to automate batch processing:</p>
+    <ul>
+      <li><strong><code>fix_all_prefabs.py</code>:</strong> Automates the batch processing of weapon prefabs and asset metadata. It resets prefab settings, validates component hierarchies, and updates metadata references instantly.</li>
+      <li><strong><code>fix_muzzleflash.py</code>:</strong> Automatically corrects the alignment and scaling of muzzle flash VFX across all weapon variants to ensure visual consistency without manual tweaking.</li>
+      <li><strong><code>fix_prefabs.py</code>:</strong> A general utility that crawls through the asset database to repair and validate prefab data consistency.</li>
+    </ul>
+  </section>
+
+  <!-- ========== POSTMORTEM ========== -->
+  <section class="game-section">
+    <h2>Postmortem / Lessons Learned</h2>
+    <ul>
+      <li><strong>AI Refactoring & Optimization:</strong> Basic distance checks require looping through all targets, which scales poorly with 100+ enemies. Using physics-based spatial partitioning (like <code>Physics.OverlapSphereNonAlloc</code>) allows the engine's optimized C++ backend to handle proximity queries natively. In future projects, I will architect AI perception around spatial hashes or Unity's Job System to decouple logic from the main thread.</li>
+      <li><strong>Editor Tooling & Asset Pipelines:</strong> The necessity for a batch-repair workflow arose because third-party weapon assets had inconsistent pivot points and missing colliders. To avoid this technical debt, I will establish strict import guidelines and utilize Unity's <code>AssetPostprocessor</code> to automatically enforce structural templates on import.</li>
+      <li><strong>Modular Weapon Refactor:</strong> The shift from a centralized weapon controller to a modular prefab-based design was driven by the need to scale. A centralized controller becomes a bottleneck as weapon complexity grows. Taking the time to decouple the logic paid massive dividends, as adding the rifle and knife took minutes instead of hours.</li>
+      <li><strong>Addressing Stability (NullRefs):</strong> The <code>NullReferenceException</code> issues were a result of the decoupled Event-driven architecture firing callbacks before dependent UI components were fully initialized in <code>Awake()</code>. In my next project, I will implement a robust Dependency Injection framework (like VContainer) to strictly manage initialization order.</li>
+    </ul>
+  </section>
+
+  <!-- ========== CONTROLS ========== -->
+  <section class="game-section">
+    <h2>Game Controls</h2>
+    <table style="width: 100%; text-align: left; border-collapse: collapse; margin-top: 1rem;">
+      <tr style="border-bottom: 1px solid #333;">
+        <th style="padding: 10px; color: #4da6ff;">Action</th>
+        <th style="padding: 10px; color: #4da6ff;">Input</th>
+      </tr>
+      <tr style="border-bottom: 1px solid #222;">
+        <td style="padding: 10px;">Move & Strafe</td>
+        <td style="padding: 10px;"><code>W</code> <code>A</code> <code>S</code> <code>D</code></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #222;">
+        <td style="padding: 10px;">Sprint / Jump</td>
+        <td style="padding: 10px;"><code>L-Shift</code> / <code>Space</code></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #222;">
+        <td style="padding: 10px;">Aim Down Sights (ADS)</td>
+        <td style="padding: 10px;"><code>Right Mouse Button</code> (Hold)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #222;">
+        <td style="padding: 10px;">Fire Weapon</td>
+        <td style="padding: 10px;"><code>Left Mouse Button</code></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #222;">
+        <td style="padding: 10px;">Reload / Drop Weapon</td>
+        <td style="padding: 10px;"><code>R</code> / <code>G</code></td>
+      </tr>
+      <tr>
+        <td style="padding: 10px;">Interact / Switch Weapon</td>
+        <td style="padding: 10px;"><code>F</code> / <code>1-4 Keys</code></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- ========== MEDIA GALLERY ========== -->
+  <section class="game-section">
+    <h2>Media & Iteration</h2>
+    <div class="game-media-grid">
+      <img src="../../assets/images/games/Zatun Zombie Game/Zombie_Gamplay (2).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Zatun Zombie Game/Zombie_Gamplay (3).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Zatun Zombie Game/Zombie_Gamplay (4).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Zatun Zombie Game/Zombie_Gamplay (5).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <div style="grid-column: 1 / -1; width: 100%; aspect-ratio: 16/9;">
+        <iframe width="100%" height="100%" style="border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);" src="https://www.youtube.com/embed/9JZCpagN9D0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CREDITS ========== -->
+  <section class="game-section">
+    <h2>Tools & Credits</h2>
+    <ul class="game-credits">
+      <li><strong>Development & Programming:</strong> Nathanieal06 (Technical Test for Zatun)</li>
+      <li><strong>3D Models & Artwork:</strong> Alpen Wolf (Characters), VIVID Arts (Environments), DJMaesen (Pistol), Pieter Ferreira (Rifle)</li>
+      <li><strong>Animations & Rigging:</strong> Mixamo, MoCap Online, ActorCore, Unity Animation Rigging Package</li>
+      <li><strong>Audio Design:</strong> Pixabay, freesound_community, Dragon-studio</li>
+      <li><strong>VFX & Shaders:</strong> Jean Moreno (War FX), BitGem (URP Water), Unity Post-Processing Stack</li>
+      <li><strong>Educational References:</strong> Code Monkey, Brackeys</li>
+    </ul>
+  </section>
+  <!-- ========== PAGINATION ========== -->
+  <div class="amy-pagination-container">
+    <a href="legacy-of-dharma.html" class="amy-pagination-link prev">
+      <i class="fas fa-arrow-left"></i>
+      <div>
+        <span class="amy-pagination-link-subtitle">Previous</span>
+        <span class="amy-pagination-link-title">Legacy of Dharma</span>
+      </div>
+    </a>
+    <a href="cityscape.html" class="amy-pagination-link next">
+      <div>
+        <span class="amy-pagination-link-subtitle">Next</span>
+        <span class="amy-pagination-link-title">CityScape</span>
+      </div>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer" style="margin-top: 5rem;">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smart Irrigation System (IoT) - Nathanieal Sandipurti">
+  <meta name="theme-color" content="#0c0c0c">
+  <title>Smart Irrigation System | Nathanieal Sandipurti</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="../../index.html" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../../index.html" class="nav-link">Home</a>
+      <a href="../../index.html#highlights" class="nav-link">Highlights</a>
+      <a href="../../index.html#about" class="nav-link">About</a>
+      <a href="../games.html" class="nav-link">Games</a>
+      <a href="../projects.html" class="nav-link active">Projects</a>
+            <div class="nav-dropdown">
+        <a class="nav-link">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="../resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="../academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="../studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="../contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="game-hero" style="background-image: url('../../assets/images/Software%20Projects/Smart_Irrigation/pin-diagram.png'); background-color: #0c0c0c; background-size: contain; background-position: center; background-repeat: no-repeat;">
+    <div class="game-hero-content" style="background: rgba(0,0,0,0.6); padding: 2rem; border-radius: 10px;">
+      <a href="../projects.html" style="position: fixed; top: 90px; right: 20px; z-index: 999; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.2rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); text-decoration: none; font-size: 0.9rem; color: #fff; transition: background 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.3);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.5)'"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+      <h1 class="game-hero-title">Smart Irrigation System</h1>
+      <div class="game-hero-tags">
+        <span class="amy-card-tag">Arduino (C++)</span>
+        <span class="amy-card-tag">IoT / Hardware</span>
+        <span class="amy-card-tag">Automation</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== QUICK FACTS ========== -->
+  <section class="game-quick-facts">
+    <div class="game-quick-facts-inner">
+      <div class="game-fact">
+        <span class="game-fact-label">Role</span>
+        <span class="game-fact-value">Hardware & Software Developer</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Software Tech</span>
+        <span class="game-fact-value">C++ (Arduino IDE)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Hardware Stack</span>
+        <span class="game-fact-value">Arduino UNO, Soil Sensor, 5V Relay, Submersible Pump</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Interface</span>
+        <span class="game-fact-value">16x2 I2C LCD Display</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Status</span>
+        <span class="game-fact-value">Completed</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OVERVIEW & CONTRIBUTION ========== -->
+  <section class="game-section">
+    <h2>Overview</h2>
+    <p>
+      The Smart Irrigation System is a fully autonomous hardware project built with Arduino. It continuously monitors the moisture levels of the soil and automatically waters the plants when the environment becomes too dry, ensuring optimal growth without human intervention.
+    </p>
+
+    <h2>How I Built It</h2>
+    <p>
+      This IoT project bridges the gap between software logic and real-world mechanical action:
+    </p>
+    <ul>
+      <li><strong>Hardware Assembly:</strong> Wired a capacitive soil moisture sensor to the analog pins of an Arduino UNO. I connected a 5V mini submersible water pump to a digital pin via a 1-Channel Relay Module to handle the voltage difference safely.</li>
+      <li><strong>C++ Logic:</strong> Wrote the main control loop in C++ using the Arduino IDE. The script utilizes the <code>analogRead()</code> function to pull raw voltage data from the soil sensor, maps that data into a 0-100% moisture scale, and enforces strict thresholds.</li>
+      <li><strong>Autonomous Automation:</strong> Programmed the system to automatically trigger the relay (turning the water pump ON) when the soil moisture drops below 30%, and turn it OFF once the moisture level safely exceeds 80%.</li>
+      <li><strong>Live Interface:</strong> Integrated a 16x2 I2C LCD Display using the <code>LiquidCrystal_I2C</code> library to show real-time diagnostics, including the current moisture percentage and the active state of the water pump.</li>
+    </ul>
+
+    <h2>Features & Functionality</h2>
+    <ul>
+      <li><strong>Zero Maintenance Watering:</strong> The system completely eliminates the need for manual watering schedules.</li>
+      <li><strong>Water Conservation:</strong> By only watering when the soil is verifiably dry (sub 30%), the system prevents overwatering and conserves water usage.</li>
+      <li><strong>Real-Time LCD Diagnostics:</strong> The integrated screen allows users to quickly glance at the health of the system without needing to plug it into a computer.</li>
+    </ul>
+  </section>
+
+  <!-- ========== DEMONSTRATION VIDEO ========== -->
+  <section class="game-section">
+    <h2>Project Demonstration</h2>
+    <p>
+      Check out a live demonstration of the Smart Irrigation System automatically detecting dry soil and pumping water!
+    </p>
+    <div style="text-align: center; margin-top: 2rem;">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/i4iJMQyPsNk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></iframe>
+    </div>
+  </section>
+
+  <!-- ========== POSTMORTEM ========== -->
+  <section class="game-section">
+    <h2>Postmortem / Lessons Learned</h2>
+    
+    <h3>What went well</h3>
+    <ul>
+      <li><strong>Hardware Reliability:</strong> Utilizing a relay module instead of trying to power the pump directly from the Arduino board was crucial for protecting the microcontroller from voltage spikes and ensuring stable performance.</li>
+      <li><strong>I2C LCD Display:</strong> Switching to an I2C module for the LCD screen drastically reduced the required wiring from 12+ pins down to just 4, keeping the breadboard incredibly clean and easy to debug.</li>
+    </ul>
+
+    <h3>Drawbacks & Areas for Improvement</h3>
+    <ul>
+      <li><strong>No Cloud Connectivity:</strong> While the current system works flawlessly offline, swapping the Arduino UNO for an ESP8266 or ESP32 would allow the system to connect to Wi-Fi. This would enable sending push notifications to a smartphone when the water reservoir is empty.</li>
+      <li><strong>Fixed Thresholds:</strong> The code currently hardcodes the 30% and 80% thresholds. Adding a physical potentiometer to let the user manually adjust the thresholds without modifying the C++ code would greatly improve the project's usability.</li>
+    </ul>
+  </section>
+
+  <!-- ========== LINKS & CREDITS ========== -->
+  <section class="game-section">
+    <h2>Links & Credits</h2>
+    <ul class="game-credits">
+      <li><strong>Nathanieal Sandipurti:</strong> Hardware Assembly / Software Developer</li>
+    </ul>
+  </section>
+  <!-- ========== PAGINATION ========== -->
+  <div class="amy-pagination-container">
+    <a href="image-classification.html" class="amy-pagination-link prev">
+      <i class="fas fa-arrow-left"></i>
+      <div>
+        <span class="amy-pagination-link-subtitle">Previous</span>
+        <span class="amy-pagination-link-title">Image Classification</span>
+      </div>
+    </a>
+    <a href="../projects.html" class="amy-pagination-link next" style="border-color: rgba(255,255,255,0.2);">
+      <div>
+        <span class="amy-pagination-link-subtitle">Return</span>
+        <span class="amy-pagination-link-title">Back to Projects</span>
+      </div>
+      <i class="fas fa-th-large"></i>
+    </a>
+  </div>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer" style="margin-top: 5rem;">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      </div>
+      <p class="footer__copy">&copy; 2026 Nathanieal Sandipurti</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nathanieal Sandipurti — Academics">
+  <meta content="#0c0c0c" name="theme-color">
+  <title>Nathanieal Sandipurti | Academics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body style="background-color: #0c0c0c;">
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../index.html" class="nav-link">Home</a>
+      <a href="../index.html#highlights" class="nav-link">Highlights</a>
+      <a href="../index.html#about" class="nav-link">About</a>
+      <a href="games.html" class="nav-link">Games</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <div class="nav-dropdown">
+        <span class="nav-link active">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></span>
+        <div class="nav-dropdown-menu">
+          <a href="resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="amy-games-section" style="min-height: 60vh;">
+    <div class="amy-games-header" style="position: relative; overflow: hidden;">
+      <!-- Background GIF -->
+      <div class="hero-video" style="z-index: 0;">
+        <img src="../assets/images/Academics/Academics.gif" alt="Academics Background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 15%; pointer-events: none;">
+      </div>
+      <!-- Dark/Glass Overlay for text readability -->
+      <div class="hero-overlay" style="z-index: 1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);"></div>
+
+      <!-- Content -->
+      <div style="position: relative; z-index: 2;">
+        <h1>ACADEMICS</h1>
+        <p>MY EDUCATIONAL BACKGROUND.</p>
+      </div>
+    </div>
+    
+    <div class="container" style="padding: 2rem 1.5rem; max-width: 1400px; margin: 0 auto;">
+      
+      <!-- Tabs moved to bottom -->
+
+      <!-- ================= COLLEGE DASHBOARD ================= -->
+      <div id="college-dash" class="dash-content active">
+        
+        <div class="dash-header" style="margin-bottom: 2rem;">
+          <h2 class="dash-title">Result Dashboard</h2>
+        </div>
+
+        <!-- Top Stats -->
+        <div class="dash-stats-grid">
+          <div class="dash-stat-card reveal reveal-d1 visible">
+            <div class="stat-icon purple"><i class="fas fa-graduation-cap"></i></div>
+            <div class="stat-info">
+              <span class="stat-label">CGPA</span>
+              <span class="stat-value">8.89</span>
+              <span class="stat-sub">Cumulative</span>
+            </div>
+          </div>
+          
+          <div class="dash-stat-card reveal reveal-d2 visible">
+            <div class="stat-icon blue"><i class="fas fa-chart-pie"></i></div>
+            <div class="stat-info">
+              <span class="stat-label">CPI</span>
+              <span class="stat-value">8.25</span>
+              <span class="stat-sub">Performance Index</span>
+            </div>
+          </div>
+
+          <div class="dash-stat-card reveal reveal-d3 visible">
+            <div class="stat-icon green"><i class="fas fa-star"></i></div>
+            <div class="stat-info">
+              <span class="stat-label">SPI (Sem 6)</span>
+              <span class="stat-value">8.91</span>
+              <span class="stat-sub">Current Semester</span>
+            </div>
+          </div>
+
+          <div class="dash-stat-card reveal visible" style="transition-delay: 0.32s">
+            <div class="stat-icon orange"><i class="fas fa-check-circle"></i></div>
+            <div class="stat-info">
+              <span class="stat-label">Active Backlogs</span>
+              <span class="stat-value" style="color: #34d399;">0</span>
+              <span class="stat-sub">All Clear</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Middle Section -->
+        <div class="dash-main-grid">
+          
+          <!-- Chart Card -->
+          <div class="dash-card reveal visible" style="transition-delay: 0.4s">
+            <div class="dash-card-header">
+              <h3>Semester Wise Performance</h3>
+              <select id="chart-metric-select" class="dash-btn" style="background: transparent; border: 1px solid rgba(255,255,255,0.1); color: #fff; cursor: pointer; outline: none;">
+                <option style="background: #141414; color: #fff;">SPI</option>
+                <option style="background: #141414; color: #fff;">CGPA</option>
+                <option style="background: #141414; color: #fff;">CPI</option>
+              </select>
+            </div>
+            <div class="chart-container">
+              <canvas id="cgpaChart"></canvas>
+            </div>
+            <div class="insight-box">
+              <div class="insight-icon"><i class="fas fa-chart-line"></i></div>
+              <div class="insight-text">
+                <h4>Keep it up!</h4>
+                <p>Your performance has significantly improved, achieving an SPI of 8.91 in Sem 6.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Table Card -->
+          <div class="dash-card reveal visible" style="transition-delay: 0.48s">
+            <div class="dash-card-header">
+              <div class="dash-card-header-inner">
+                <button class="nav-btn" id="prev-sem-btn" onclick="changeSem(-1)"><i class="fas fa-chevron-left"></i></button>
+                <h3 id="recent-results-title">Recent Results (Sem 6)</h3>
+                <button class="nav-btn" id="next-sem-btn" onclick="changeSem(1)" disabled><i class="fas fa-chevron-right"></i></button>
+              </div>
+              <button class="dash-btn" onclick="window.open('../assets/Result/Merged_Result.pdf', '_blank')">View All Results</button>
+            </div>
+            <div class="results-table-wrapper">
+              <table class="results-table">
+                <thead>
+                  <tr>
+                    <th>Subject Code</th>
+                    <th>Subject Name</th>
+                    <th>Grade</th>
+                  </tr>
+                </thead>
+                <tbody id="results-table-body">
+                  <!-- JS populated -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom Cards -->
+        <div class="dash-bottom-grid">
+          <div class="bottom-card blue reveal visible" style="transition-delay: 0.56s">
+            <div class="bottom-card-icon"><i class="fas fa-university"></i></div>
+            <div class="bottom-card-content">
+              <h4>College Information</h4>
+              <p>Pacific School of Engineering (Kadodara)<br>Affiliated with Gujarat Technological University (GTU)</p>
+              <a href="#">B.E. Computer Engineering</a>
+            </div>
+          </div>
+
+          <div class="bottom-card purple reveal visible" style="transition-delay: 0.64s">
+            <div class="bottom-card-icon"><i class="fas fa-file-alt"></i></div>
+            <div class="bottom-card-content">
+              <h4>Exam Cell</h4>
+              <p>Seat Number: 231120107036<br>Batch 2023–27</p>
+              <a href="https://www.gtu.ac.in/result.aspx" target="_blank">GTU Results Portal</a>
+            </div>
+          </div>
+
+          <div class="bottom-card green reveal visible" style="transition-delay: 0.72s">
+            <div class="bottom-card-icon"><i class="fas fa-link"></i></div>
+            <div class="bottom-card-content">
+              <h4>Important Links</h4>
+              <a href="https://www.gtu.ac.in/academiccal.aspx" target="_blank" style="display:block; margin: 0.3rem 0;">Academic Calendar <i class="fas fa-chevron-right" style="font-size:0.7em; margin-left:4px;"></i></a>
+              <a href="https://gtu.ac.in/Regulations.aspx" target="_blank" style="display:block; margin: 0.3rem 0;">Result Guidelines <i class="fas fa-chevron-right" style="font-size:0.7em; margin-left:4px;"></i></a>
+              <a href="../assets/Result/collegedekho_260805_192542.pdf" target="_blank" style="display:block; margin: 0.3rem 0;">Grade System <i class="fas fa-chevron-right" style="font-size:0.7em; margin-left:4px;"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= SCHOOL DASHBOARD ================= -->
+      <div id="school-dash" class="dash-content">
+        <div class="dash-header">
+          <h2 class="dash-title" style="font-size: 1.8rem; margin-bottom: 1.5rem;">School Academic History</h2>
+        </div>
+        
+        <div class="school-timeline">
+          <!-- 12th Grade -->
+          <div class="school-item reveal visible">
+            <div class="school-marker"></div>
+            <div class="school-content">
+              <div class="school-header">
+                <h3>Senior Secondary (12th)</h3>
+                <span class="score-badge">69%</span>
+              </div>
+              <p class="institute-name" style="color: #fff;">Metas Adventist International School (Vyara)</p>
+              <p class="timeline"><i class="far fa-calendar-alt"></i> 2019 - 2021</p>
+              <p class="school-stream">Science Stream (PCM)</p>
+            </div>
+          </div>
+
+          <!-- 10th Grade -->
+          <div class="school-item reveal visible" style="transition-delay: 0.1s">
+            <div class="school-marker"></div>
+            <div class="school-content">
+              <div class="school-header">
+                <h3>Secondary (10th)</h3>
+                <span class="score-badge">70%</span>
+              </div>
+              <p class="institute-name" style="color: #fff;">Metas Adventist International School (Vyara)</p>
+              <p class="timeline"><i class="far fa-calendar-alt"></i> 2018 - 2019</p>
+            </div>
+          </div>
+
+          <!-- UKG to 8th Grade -->
+          <div class="school-item reveal visible" style="transition-delay: 0.2s">
+            <div class="school-marker"></div>
+            <div class="school-content">
+              <div class="school-header">
+                <h3>Primary & Middle School (UKG - 8th)</h3>
+              </div>
+              <p class="institute-name" style="color: #fff;">Signaia Public School (Ukai)</p>
+              <p class="timeline"><i class="far fa-calendar-alt"></i> Completed in 2017</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="amy-games-nav-container">
+      <div class="amy-games-nav">
+        <a class="amy-nav-item acad-tab active" onclick="switchDash('college')" style="cursor: pointer; background-color: #1e3a8a; border: 1px solid #fff;">College</a>
+        <a class="amy-nav-item acad-tab" onclick="switchDash('school')" style="cursor: pointer;">School</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer" style="margin-top: 0;">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      </div>
+      <p class="footer__copy">&copy; 2025 Nathanieal Sandipurti</p>
+    </div>
+  </footer>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    function switchDash(tab) {
+      document.querySelectorAll('.acad-tab').forEach(btn => {
+        btn.classList.remove('active');
+        btn.style.backgroundColor = '';
+        btn.style.border = '';
+      });
+      document.querySelectorAll('.dash-content').forEach(content => content.classList.remove('active'));
+      
+      event.target.classList.add('active');
+      event.target.style.backgroundColor = '#1e3a8a';
+      event.target.style.border = '1px solid #fff';
+      document.getElementById(tab + '-dash').classList.add('active');
+    }
+
+    const semesterData = [
+      {
+        title: "Recent Results (Sem 1)",
+        subjects: [
+          { code: "3110005", name: "Basic Electrical Engineering", grade: "BC", css: "b-plus" },
+          { code: "3110006", name: "Basic Mechanical Engineering", grade: "BC", css: "b-plus" },
+          { code: "3110007", name: "Environmental Sciences", grade: "PS", css: "c" },
+          { code: "3110014", name: "Mathematics - 1", grade: "DD", css: "c" },
+          { code: "3110017", name: "Induction Program", grade: "PS", css: "c" },
+          { code: "3110018", name: "Physics", grade: "AB", css: "a" }
+        ]
+      },
+      {
+        title: "Recent Results (Sem 2)",
+        subjects: [
+          { code: "3110002", name: "English", grade: "BB", css: "b-plus" },
+          { code: "3110003", name: "Programming for Problem Solving", grade: "BB", css: "b-plus" },
+          { code: "3110012", name: "Workshop/ Manufacturing Practices", grade: "AA", css: "a-plus" },
+          { code: "3110013", name: "Engineering Graphics & Design", grade: "BC", css: "b-plus" },
+          { code: "3110015", name: "Mathematics - 2", grade: "DD", css: "c" },
+          { code: "3110016", name: "Basic Electronics", grade: "BB", css: "b-plus" }
+        ]
+      },
+      {
+        title: "Recent Results (Sem 3)",
+        subjects: [
+          { code: "3130004", name: "Effective Technical Communication", grade: "AB", css: "a" },
+          { code: "3130006", name: "Probability and Statistics", grade: "CC", css: "b" },
+          { code: "3130007", name: "Indian Constitution", grade: "PS", css: "c" },
+          { code: "3130008", name: "Design Engineering - I A", grade: "AA", css: "a-plus" },
+          { code: "3130702", name: "Data Structures", grade: "AB", css: "a" },
+          { code: "3130703", name: "Database Management System", grade: "AA", css: "a-plus" },
+          { code: "3130704", name: "Digital Fundamentals", grade: "BB", css: "b-plus" }
+        ]
+      },
+      {
+        title: "Recent Results (Sem 4)",
+        subjects: [
+          { code: "3140005", name: "Design Engineering 1 B", grade: "AA", css: "a-plus" },
+          { code: "3140702", name: "Operating System", grade: "AA", css: "a-plus" },
+          { code: "3140705", name: "Object Oriented Programming -I", grade: "AA", css: "a-plus" },
+          { code: "3140707", name: "Computer Organization & Architecture", grade: "AB", css: "a" },
+          { code: "3140708", name: "Discrete Mathematics", grade: "BB", css: "b-plus" },
+          { code: "3140709", name: "Principles of Economics and Management", grade: "BB", css: "b-plus" }
+        ]
+      },
+      {
+        title: "Recent Results (Sem 5)",
+        subjects: [
+          { code: "3150001", name: "Design Engineering - II A", grade: "AA", css: "a-plus" },
+          { code: "3150005", name: "Integrated Personality Development Course", grade: "AA", css: "a-plus" },
+          { code: "3150703", name: "Analysis and Design of Algorithms", grade: "AB", css: "a" },
+          { code: "3150709", name: "Professional ethics", grade: "BB", css: "b-plus" },
+          { code: "3150710", name: "Computer Networks", grade: "AB", css: "a" },
+          { code: "3150711", name: "Software Engineering", grade: "AB", css: "a" },
+          { code: "3150713", name: "Python for Data Science", grade: "BB", css: "b-plus" }
+        ]
+      },
+      {
+        title: "Recent Results (Sem 6)",
+        subjects: [
+          { code: "3160001", name: "Design Engineering II B", grade: "AA", css: "a-plus" },
+          { code: "3160003", name: "Integrated Personality Development", grade: "AA", css: "a-plus" },
+          { code: "3160704", name: "Theory of Computation", grade: "BB", css: "b-plus" },
+          { code: "3160707", name: "Advanced Java Programming", grade: "AB", css: "a" },
+          { code: "3160712", name: "Microprocessor and Interfacing", grade: "AA", css: "a-plus" },
+          { code: "3160713", name: "Web Programming", grade: "BB", css: "b-plus" },
+          { code: "3160716", name: "IOT and applications", grade: "AB", css: "a" }
+        ]
+      }
+    ];
+
+    let currentSemIndex = 5;
+
+    function renderSemTable() {
+      const sem = semesterData[currentSemIndex];
+      document.getElementById('recent-results-title').innerText = sem.title;
+      
+      const tbody = document.getElementById('results-table-body');
+      tbody.innerHTML = '';
+      sem.subjects.forEach(sub => {
+        tbody.innerHTML += `<tr>
+          <td>${sub.code}</td>
+          <td>${sub.name}</td>
+          <td><span class="grade-badge ${sub.css}">${sub.grade}</span></td>
+        </tr>`;
+      });
+
+      document.getElementById('prev-sem-btn').disabled = (currentSemIndex === 0);
+      document.getElementById('next-sem-btn').disabled = (currentSemIndex === semesterData.length - 1);
+    }
+
+    function changeSem(dir) {
+      currentSemIndex += dir;
+      renderSemTable();
+    }
+
+    // Chart.js Setup
+    document.addEventListener('DOMContentLoaded', function() {
+      renderSemTable();
+      const ctx = document.getElementById('cgpaChart').getContext('2d');
+      
+      const gradient = ctx.createLinearGradient(0, 0, 0, 250);
+      gradient.addColorStop(0, 'rgba(139, 92, 246, 0.4)');
+      gradient.addColorStop(1, 'rgba(139, 92, 246, 0)');
+
+      window.cgpaChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4', 'Sem 5', 'Sem 6'],
+          datasets: [{
+            label: 'SPI',
+            data: [6.59, 7.09, 8.43, 9.13, 8.87, 8.91],
+            borderColor: '#a78bfa',
+            backgroundColor: gradient,
+            borderWidth: 2,
+            pointBackgroundColor: '#fff',
+            pointBorderColor: '#a78bfa',
+            pointBorderWidth: 2,
+            pointRadius: 4,
+            pointHoverRadius: 6,
+            fill: true,
+            tension: 0.4
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: 'rgba(0,0,0,0.8)',
+              titleColor: '#fff',
+              bodyColor: '#fff',
+              padding: 10,
+              displayColors: false
+            }
+          },
+          scales: {
+            y: {
+              min: 0,
+              max: 10,
+              grid: { color: 'rgba(255,255,255,0.05)' },
+              ticks: { color: '#777', stepSize: 2 }
+            },
+            x: {
+              grid: { display: false },
+              ticks: { color: '#777', font: { size: 10 } }
+            }
+          }
+        }
+      });
+
+      // Handle Metric Change
+      document.getElementById('chart-metric-select').addEventListener('change', function(e) {
+        const metric = e.target.value;
+        const datasets = {
+          'SPI': [6.59, 7.09, 8.43, 9.13, 8.87, 8.91],
+          'CPI': [6.59, 7.45, 7.13, 7.91, 8.11, 8.25],
+          'CGPA': [null, null, null, null, 8.87, 8.89]
+        };
+        window.cgpaChartInstance.data.datasets[0].label = metric;
+        window.cgpaChartInstance.data.datasets[0].data = datasets[metric];
+        window.cgpaChartInstance.update();
+      });
+    });
+  </script>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

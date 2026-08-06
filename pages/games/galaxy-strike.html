@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galaxy Strike - A Game by Nathanieal Sandipurti">
+  <meta name="theme-color" content="#0c0c0c">
+  <title>Galaxy Strike | Nathanieal Sandipurti</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="../../index.html" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../../index.html#home" class="nav-link">Home</a>
+      <a href="../../index.html#highlights" class="nav-link">Highlights</a>
+      <a href="../../index.html#about" class="nav-link">About</a>
+      <a href="../games.html" class="nav-link active">Games</a>
+      <a href="../../index.html#projects" class="nav-link">Projects</a>
+            <div class="nav-dropdown">
+        <a class="nav-link">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="../resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="../academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="../studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="../contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="game-hero" style="background-image: url('../../assets/images/games/Galaxy Strike/Galaxy_Strike_1.png'); background-color: #1c1c1c;">
+    <div class="game-hero-content">
+      <a href="../games.html" style="position: fixed; top: 90px; right: 20px; z-index: 999; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.2rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); text-decoration: none; font-size: 0.9rem; color: #fff; transition: background 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.3);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.5)'"><i class="fas fa-arrow-left"></i> Back to Games</a>
+      <h1 class="game-hero-title">Galaxy Strike</h1>
+      <div class="game-hero-tags">
+        <span class="amy-card-tag">Unity</span>
+        <span class="amy-card-tag">C#</span>
+        <span class="amy-card-tag">Space Shooter</span>
+      </div>
+      <div class="game-hero-links">
+        <a href="https://nathanieal.itch.io/galaxy-strike" target="_blank"><i class="fas fa-play"></i> Play Now</a>
+        <a href="https://github.com/Nathanieal06/Galaxy_Strike" class="secondary-link" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== QUICK FACTS ========== -->
+  <section class="game-quick-facts">
+    <div class="game-quick-facts-inner">
+      <div class="game-fact">
+        <span class="game-fact-label">Role</span>
+        <span class="game-fact-value">Sole Developer</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Team Size</span>
+        <span class="game-fact-value">1</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Engine</span>
+        <span class="game-fact-value">Unity 6 (6000.3.11f1)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Platform</span>
+        <span class="game-fact-value">PC (Windows)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Status</span>
+        <span class="game-fact-value">Completed Prototype</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OVERVIEW & CONTRIBUTION ========== -->
+  <section class="game-section">
+    <h2>Overview</h2>
+    <p>
+      Galaxy Strike is a fast-paced space shooter. The player pilots a spacecraft, moves within screen bounds with banking/pitching visual feedback, fires projectiles at enemies, and tracks score. The project leverages Unity's High Definition Render Pipeline (HDRP) and ShaderGraph for high-quality space visuals, along with Timeline sequences for cinematic cutscenes.
+    </p>
+
+    <h2>Your Contribution</h2>
+    <p>
+      As the sole developer, I implemented all core gameplay systems:
+    </p>
+    <ul>
+      <li><strong>Player Ship Movement:</strong> Created a 2D-style space ship movement clamped within screen bounds, featuring smooth pitch and roll banking based on player input for a responsive feel.</li>
+      <li><strong>Weapon / Shooting System:</strong> Handled input-driven projectile firing with configurable fire rates.</li>
+      <li><strong>Enemy System & Collision:</strong> Implemented lightweight enemy logic and handled collisions between the player, bullets, and enemies.</li>
+      <li><strong>Timeline Cutscenes:</strong> Integrated an intro sequence using Unity Timeline with activation/animation tracks to sequence camera moves, dialogue, and enemy spawns without hard-coding timings.</li>
+      <li><strong>Graphics Pipeline:</strong> Utilized HDRP, ShaderGraph, and Post Processing (bloom, chromatic aberration) to achieve high-quality space aesthetics.</li>
+    </ul>
+  </section>
+
+  <!-- ========== MEDIA GALLERY ========== -->
+  <section class="game-section">
+    <h2>Media & Iteration</h2>
+    <div class="game-media-grid">
+      <img src="../../assets/images/games/Galaxy Strike/Galaxy_Strike_1.png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Galaxy Strike/Galaxy_Strike_2.png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Galaxy Strike/Galaxy_Strike_3.png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Galaxy Strike/Galaxy_Strike_4.png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <div style="grid-column: 1 / -1; width: 100%; aspect-ratio: 16/9;">
+        <iframe width="100%" height="100%" style="border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);" src="https://www.youtube.com/embed/4-XoGAptck8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+    </section>
+
+  <!-- ========== TECHNICAL DEEP DIVE ========== -->
+  <section class="game-section">
+    <h2>Technical Deep-Dive</h2>
+    <h3>Banking Ship Movement with Clamped Bounds</h3>
+    <p>
+      A space shooter needs the ship to feel physically responsive — rolling when moving left/right, pitching when moving up/down — while staying within screen boundaries. Movement and rotation are processed as two completely separate concerns. Local position is clamped to configurable X/Y ranges. Rotation uses <code>Quaternion.Lerp</code> with independent pitch and roll factors, making the banking feel smooth and fully tunable in the inspector.
+    </p>
+    <pre style="background: #111; padding: 1rem; border-radius: 4px; overflow-x: auto; color: #569cd6; font-family: monospace;">
+// PlayerMovement.cs
+void ProcessTransform() {
+    float xRaw = transform.localPosition.x + movement.x * controlSpeed * Time.deltaTime;
+    float yRaw = transform.localPosition.y + movement.y * controlSpeed * Time.deltaTime;
+    transform.localPosition = new Vector3(
+        Mathf.Clamp(xRaw, -xClampRange, xClampRange),
+        Mathf.Clamp(yRaw, -yClampRange, yClampRange), 0f);
+}
+
+void ProcessRotation() {
+    float pitch = -controlFactorPitch * movement.y;
+    float roll  = -controlRollFactor  * movement.x;
+    transform.localRotation = Quaternion.Lerp(
+        transform.localRotation, Quaternion.Euler(pitch, 0f, roll),
+        rotationSpeed * Time.deltaTime);
+}
+    </pre>
+
+    <h3 style="margin-top: 2rem;">HDRP for Space Visuals & Timeline Sequences</h3>
+    <p>
+      Achieving high-quality space visuals required using HDRP along with ShaderGraph for custom spaceship/energy shaders and the Post Processing stack for volumetric lighting and bloom. Additionally, integrating a cutscene without hard-coding timings in script was solved using Unity Timeline, allowing visual sequencing of camera moves, dialogue, and enemy spawns with zero code required for the sequence itself.
+    </p>
+  </section>
+
+  <!-- ========== POSTMORTEM ========== -->
+  <section class="game-section">
+    <h2>Postmortem / Lessons Learned</h2>
+    
+    <h3>What went well</h3>
+    <ul>
+      <li><strong>The banking/pitch movement felt great immediately.</strong> Separating translation and rotation into two independent methods made it easy to tune each independently without breaking the other — the ship feels alive and responsive.</li>
+      <li><strong>HDRP delivered the visual quality I wanted.</strong> The volumetric lighting and post-processing bloom gave the game a polished space atmosphere that would have been much harder to achieve with the standard pipeline.</li>
+    </ul>
+
+    <h3>What I'd do differently</h3>
+    <ul>
+      <li><strong>Set up version control from the beginning.</strong> Not having git history means there's no record of the iteration process — I can't look back at how the enemy system evolved or when the Timeline sequence was added.</li>
+      <li><strong>Add a difficulty progression system.</strong> The game currently has no enemy scaling or wave system. I'd plan a configurable wave spawner from the start rather than treating it as something to add later.</li>
+    </ul>
+  </section>
+
+  <!-- ========== LINKS & CREDITS ========== -->
+  <section class="game-section">
+    <h2>Links & Credits</h2>
+    <ul class="game-credits">
+      <li><strong>Nathanieal Sandipurti:</strong> Sole Developer</li>
+      <li><strong>Third-Party Assets:</strong> Holotna Mountain terrain pack</li>
+      <li><strong>Source Code:</strong> <a href="https://github.com/Nathanieal06/Galaxy_Strike" target="_blank" style="color: #4da6ff; text-decoration: underline; text-underline-offset: 3px;">GitHub Repository</a></li>
+    </ul>
+  </section>
+  <!-- ========== PAGINATION ========== -->
+  <div class="amy-pagination-container">
+    <a href="royal-run.html" class="amy-pagination-link prev">
+      <i class="fas fa-arrow-left"></i>
+      <div>
+        <span class="amy-pagination-link-subtitle">Previous</span>
+        <span class="amy-pagination-link-title">Royal Run</span>
+      </div>
+    </a>
+    <a href="rocket-boost.html" class="amy-pagination-link next">
+      <div>
+        <span class="amy-pagination-link-subtitle">Next</span>
+        <span class="amy-pagination-link-title">Rocket Boost</span>
+      </div>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer" style="margin-top: 5rem;">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

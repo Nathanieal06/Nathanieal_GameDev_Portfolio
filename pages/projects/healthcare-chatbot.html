@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Healthcare Chatbot Project - Nathanieal Sandipurti">
+  <meta name="theme-color" content="#0c0c0c">
+  <title>Healthcare Chatbot | Nathanieal Sandipurti</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="../../index.html" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../../index.html" class="nav-link">Home</a>
+      <a href="../../index.html#highlights" class="nav-link">Highlights</a>
+      <a href="../../index.html#about" class="nav-link">About</a>
+      <a href="../games.html" class="nav-link">Games</a>
+      <a href="../projects.html" class="nav-link active">Projects</a>
+            <div class="nav-dropdown">
+        <a class="nav-link">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="../resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="../academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="../studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="../contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="game-hero" style="background-image: url('../../assets/images/Software%20Projects/Healthcare_Chatbot/chatbot.png'); background-color: #0c0c0c;">
+    <div class="game-hero-content">
+      <a href="../projects.html" style="position: fixed; top: 90px; right: 20px; z-index: 999; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.2rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); text-decoration: none; font-size: 0.9rem; color: #fff; transition: background 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.3);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.5)'"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+      <h1 class="game-hero-title">Healthcare Chatbot</h1>
+      <div class="game-hero-tags">
+        <span class="amy-card-tag">Python</span>
+        <span class="amy-card-tag">Scikit-Learn</span>
+        <span class="amy-card-tag">AI/ML</span>
+      </div>
+      <div class="game-hero-links">
+        <a href="https://github.com/Nathanieal06/Healthcare_Chatbot" class="secondary-link" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== QUICK FACTS ========== -->
+  <section class="game-quick-facts">
+    <div class="game-quick-facts-inner">
+      <div class="game-fact">
+        <span class="game-fact-label">Role</span>
+        <span class="game-fact-value">Developer</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Tech Stack</span>
+        <span class="game-fact-value">Python, Scikit-Learn, Pandas</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">ML Models</span>
+        <span class="game-fact-value">Decision Tree, SVM</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Interface</span>
+        <span class="game-fact-value">Command Line Interface</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Status</span>
+        <span class="game-fact-value">Completed</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OVERVIEW & CONTRIBUTION ========== -->
+  <section class="game-section">
+    <h2>Overview</h2>
+    <p>
+      The Healthcare Chatbot is an interactive diagnostic assistant powered by machine learning. It maps user-input symptoms to potential diseases by analyzing patterns derived from medical datasets. It operates entirely through the command line, asking users follow-up questions to narrow down the diagnosis and ultimately provide the disease name, its description, and recommended precautions to take.
+    </p>
+
+    <h2>How I Built It</h2>
+    <p>
+      I built the chatbot using Python and popular data science libraries to construct a predictive diagnostic pipeline:
+    </p>
+    <ul>
+      <li><strong>Data Processing:</strong> Utilized <code>pandas</code> to read and parse comprehensive symptom datasets (<code>Training.csv</code>, <code>Testing.csv</code>). Engineered features by mapping strings to numerical labels using <code>LabelEncoder</code>.</li>
+      <li><strong>Machine Learning Models:</strong> Trained a <strong>Decision Tree Classifier</strong> as the primary engine to form the logical flow of questions, and implemented an <strong>Support Vector Machine (SVM)</strong> as a secondary model to double-check predictions.</li>
+      <li><strong>Dynamic Decision Traversal:</strong> Developed a custom recursive algorithm (<code>tree_to_code</code>) that manually traverses the trained Decision Tree. Instead of just taking a static list of symptoms, the chatbot dynamically asks the user "yes or no" questions based on the exact path of the decision tree to narrow down the probability of a specific disease.</li>
+      <li><strong>Symptom Matching:</strong> Implemented regular expressions (Regex) to allow users to type symptoms naturally, which the system then matches against the known dataset database.</li>
+    </ul>
+
+    <h2>Features & Functionality</h2>
+    <ul>
+      <li><strong>Dynamic Follow-up Questioning:</strong> The bot asks relevant questions based on your previous answers, mimicking a real doctor's diagnostic flow.</li>
+      <li><strong>Severity Assessment:</strong> It calculates a severity score based on the number of days you've experienced the symptoms and advises whether an immediate doctor visit is necessary.</li>
+      <li><strong>Precaution Generation:</strong> Once a diagnosis is reached, the bot fetches actionable precautions and a detailed description from the medical master database.</li>
+      <li><strong>Text-to-Speech (Optional):</strong> Integrated <code>pyttsx3</code> to allow the bot to vocalize its responses and diagnoses.</li>
+    </ul>
+  </section>
+
+  <!-- ========== HOW TO USE ========== -->
+  <section class="game-section">
+    <h2>How to Use</h2>
+    <p>
+      Since this project is a backend machine learning system, it operates via the command line. To test it out yourself:
+    </p>
+    <pre style="background: #111; padding: 1rem; border-radius: 4px; overflow-x: auto; color: #569cd6; font-family: monospace;">
+# 1. Clone the repository
+git clone https://github.com/Nathanieal06/Healthcare_Chatbot.git
+
+# 2. Navigate to the directory
+cd Healthcare_Chatbot
+
+# 3. Install required dependencies
+pip install -r requirements.txt
+# (Make sure you have pandas, scikit-learn, numpy, and pyttsx3 installed)
+
+# 4. Run the chatbot
+python chat_bot.py
+    </pre>
+  </section>
+
+  <!-- ========== POSTMORTEM ========== -->
+  <section class="game-section">
+    <h2>Postmortem / Lessons Learned</h2>
+    
+    <h3>What went well</h3>
+    <ul>
+      <li><strong>Model Integration:</strong> Successfully translating a static Scikit-Learn Decision Tree into a dynamic, interactive questionnaire was a challenging but highly rewarding puzzle. Writing the recursion to traverse the tree nodes on-the-fly made the bot feel responsive rather than just a simple static form.</li>
+      <li><strong>Regex Implementation:</strong> Using regex for symptom extraction drastically improved the user experience, allowing users to type symptoms without needing to know the exact database nomenclature.</li>
+    </ul>
+
+    <h3>Drawbacks & Areas for Improvement</h3>
+    <ul>
+      <li><strong>Command Line Interface (CLI):</strong> Currently, the project lacks a graphical user interface (GUI) or web front-end. Wrapping this Python logic into a Flask or FastAPI backend and connecting it to a sleek web chat interface would make it vastly more accessible to everyday users.</li>
+      <li><strong>Hardcoded File Paths:</strong> The script relies on hardcoded paths to local CSV files (e.g., <code>Data/Training.csv</code>). Moving to a centralized database (like SQLite or PostgreSQL) would make the application more robust and scalable.</li>
+      <li><strong>Overfitting Risks:</strong> Decision Trees are prone to overfitting to their training data if not properly pruned. While the secondary SVM helps mitigate this, implementing Cross-Validation and pruning techniques would improve real-world accuracy.</li>
+    </ul>
+  </section>
+
+  <!-- ========== LINKS & CREDITS ========== -->
+  <section class="game-section">
+    <h2>Links & Credits</h2>
+    <ul class="game-credits">
+      <li><strong>Nathanieal Sandipurti:</strong> Developer</li>
+      <li><strong>Source Code:</strong> <a href="https://github.com/Nathanieal06/Healthcare_Chatbot" target="_blank" style="color: #4da6ff; text-decoration: underline; text-underline-offset: 3px;">GitHub Repository</a></li>
+    </ul>
+  </section>
+  <!-- ========== PAGINATION ========== -->
+  <div class="amy-pagination-container">
+    <a href="../projects.html" class="amy-pagination-link prev" style="border-color: rgba(255,255,255,0.2);">
+      <i class="fas fa-th-large"></i>
+      <div>
+        <span class="amy-pagination-link-subtitle">Return</span>
+        <span class="amy-pagination-link-title">Back to Projects</span>
+      </div>
+    </a>
+    <a href="video-game-sales.html" class="amy-pagination-link next">
+      <div>
+        <span class="amy-pagination-link-subtitle">Next</span>
+        <span class="amy-pagination-link-title">Video Game Sales</span>
+      </div>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer" style="margin-top: 5rem;">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      </div>
+      <p class="footer__copy">&copy; 2026 Nathanieal Sandipurti</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

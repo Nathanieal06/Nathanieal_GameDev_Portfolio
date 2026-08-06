@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Landscape Image Classification - Nathanieal Sandipurti">
+  <meta name="theme-color" content="#0c0c0c">
+  <title>AI Landscape Image Classification | Nathanieal Sandipurti</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="../../index.html" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../../index.html" class="nav-link">Home</a>
+      <a href="../../index.html#highlights" class="nav-link">Highlights</a>
+      <a href="../../index.html#about" class="nav-link">About</a>
+      <a href="../games.html" class="nav-link">Games</a>
+      <a href="../projects.html" class="nav-link active">Projects</a>
+            <div class="nav-dropdown">
+        <a class="nav-link">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="../resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="../academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="../studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="../contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="game-hero" style="background-image: url('../../assets/images/Software%20Projects/Image_Classification/image-classification.png'); background-color: #0c0c0c;">
+    <div class="game-hero-content">
+      <a href="../projects.html" style="position: fixed; top: 90px; right: 20px; z-index: 999; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.2rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); text-decoration: none; font-size: 0.9rem; color: #fff; transition: background 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.3);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.5)'"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+      <h1 class="game-hero-title">AI Landscape Image Classification</h1>
+      <div class="game-hero-tags">
+        <span class="amy-card-tag">Python</span>
+        <span class="amy-card-tag">TensorFlow & Keras</span>
+        <span class="amy-card-tag">Computer Vision</span>
+      </div>
+      <div class="game-hero-links">
+        <a href="https://colab.research.google.com/drive/154wC3Ijw62emHh8Smwg1JcyLT7qW3iVB?usp=sharing" class="secondary-link" target="_blank"><i class="fas fa-code"></i> Google Colab</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== QUICK FACTS ========== -->
+  <section class="game-quick-facts">
+    <div class="game-quick-facts-inner">
+      <div class="game-fact">
+        <span class="game-fact-label">Role</span>
+        <span class="game-fact-label">AI Developer</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Tech Stack</span>
+        <span class="game-fact-value">Python, TensorFlow, Keras</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">ML Models</span>
+        <span class="game-fact-value">Convolutional Neural Network (CNN)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Interface</span>
+        <span class="game-fact-value">Jupyter Notebook (Colab)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Status</span>
+        <span class="game-fact-value">Completed</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OVERVIEW & CONTRIBUTION ========== -->
+  <section class="game-section">
+    <h2>Overview</h2>
+    <p>
+      The AI Landscape Image Classification project is an advanced computer vision model capable of categorizing satellite and aerial photography into distinct biomes. Utilizing deep learning, the model accurately scans and identifies whether an image represents a Cloudy sky, a Desert, a Green Area (Forests/Fields), or a body of Water.
+    </p>
+
+    <h2>How I Built It</h2>
+    <p>
+      This model was engineered entirely in Python utilizing the powerful TensorFlow and Keras libraries for Deep Learning:
+    </p>
+    <ul>
+      <li><strong>Data Pipeline & Augmentation:</strong> Rather than relying on a static dataset, I used Keras's <code>ImageDataGenerator</code> to automatically rescale, rotate, shear, and flip the 5,000+ source images during training. This prevents overfitting and forces the network to learn structural patterns rather than memorizing exact pixels.</li>
+      <li><strong>Deep Neural Architecture (CNN):</strong> I constructed a <strong>Convolutional Neural Network (CNN)</strong> using a Sequential API. The network features three progressively deeper convolutional blocks (32, 64, and 128 filters) combined with <code>MaxPooling2D</code> layers to extract intricate visual features like textures and edges.</li>
+      <li><strong>Dense Layers & Dropout:</strong> The flattened feature maps are passed into a dense neural layer with 128 neurons. I implemented a <code>Dropout(0.5)</code> layer to arbitrarily drop 50% of connections during training, drastically improving the model's ability to generalize to new, unseen images.</li>
+      <li><strong>Softmax Classification:</strong> The final layer utilizes a Softmax activation function to output a clean probability distribution across the 4 possible landscape classes.</li>
+    </ul>
+
+    <h2>Features & Capabilities</h2>
+    <ul>
+      <li><strong>Multi-Class Landscape Detection:</strong> Seamlessly differentiates between structurally unique environments (Water vs. Desert vs. Green Area vs. Clouds).</li>
+      <li><strong>GPU-Accelerated Training:</strong> The notebook is optimized for cloud GPUs (like the T4 on Google Colab) using the Adam optimizer and categorical crossentropy loss to accelerate the training epochs.</li>
+      <li><strong>Visual Model Plotting:</strong> Uses Keras utilities to generate an exact flowchart visualization of the neural network's architecture directly inside the notebook.</li>
+    </ul>
+  </section>
+
+  <!-- ========== HOW TO USE ========== -->
+  <section class="game-section">
+    <h2>How to View & Use</h2>
+    <p>
+      This project is hosted directly on Google Colab. Because it requires heavy image processing, running it in the cloud via the link below is the fastest way to test the model:
+    </p>
+    <pre style="background: #111; padding: 1rem; border-radius: 4px; overflow-x: auto; color: #569cd6; font-family: monospace;">
+# 1. Open the Google Colab Notebook link above
+# 2. Make sure your runtime is set to GPU (Runtime -> Change runtime type)
+# 3. Click on 'Runtime' -> 'Run all' to compile the CNN and begin training!
+    </pre>
+  </section>
+
+  <!-- ========== POSTMORTEM ========== -->
+  <section class="game-section">
+    <h2>Postmortem / Lessons Learned</h2>
+    
+    <h3>What went well</h3>
+    <ul>
+      <li><strong>Data Augmentation Strategy:</strong> Applying aggressive data augmentation (zooming, flipping, and shearing) proved highly effective. It made a relatively small dataset of 5,600 images feel much larger, resulting in an immediate boost to validation accuracy.</li>
+      <li><strong>Network Depth Optimization:</strong> The three-layer Convolutional stack provided the perfect balance between training speed and feature extraction capability without running out of GPU memory.</li>
+    </ul>
+
+    <h3>Drawbacks & Areas for Improvement</h3>
+    <ul>
+      <li><strong>Epoch Under-Training:</strong> The model was initially tested on only 5 epochs to gauge feasibility. To push the validation accuracy into the high 90s, the model needs to be trained for 30-50 epochs with an Early Stopping callback to halt training exactly when the loss stops improving.</li>
+      <li><strong>Pre-trained Transfer Learning:</strong> Building a CNN from scratch is an excellent learning exercise, but swapping the base architecture out for a pre-trained model (like ResNet50 or MobileNetV2) using transfer learning would yield far superior accuracy on edge cases.</li>
+    </ul>
+  </section>
+
+  <!-- ========== LINKS & CREDITS ========== -->
+  <section class="game-section">
+    <h2>Links & Credits</h2>
+    <ul class="game-credits">
+      <li><strong>Nathanieal Sandipurti:</strong> AI Developer / Data Scientist</li>
+      <li><strong>Source Notebook:</strong> <a href="https://colab.research.google.com/drive/154wC3Ijw62emHh8Smwg1JcyLT7qW3iVB?usp=sharing" target="_blank" style="color: #4da6ff; text-decoration: underline; text-underline-offset: 3px;">Google Colab</a></li>
+    </ul>
+  </section>
+  <!-- ========== PAGINATION ========== -->
+  <div class="amy-pagination-container">
+    <a href="video-game-sales.html" class="amy-pagination-link prev">
+      <i class="fas fa-arrow-left"></i>
+      <div>
+        <span class="amy-pagination-link-subtitle">Previous</span>
+        <span class="amy-pagination-link-title">Video Game Sales</span>
+      </div>
+    </a>
+    <a href="smart-irrigation.html" class="amy-pagination-link next">
+      <div>
+        <span class="amy-pagination-link-subtitle">Next</span>
+        <span class="amy-pagination-link-title">Smart Irrigation</span>
+      </div>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer" style="margin-top: 5rem;">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      </div>
+      <p class="footer__copy">&copy; 2026 Nathanieal Sandipurti</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

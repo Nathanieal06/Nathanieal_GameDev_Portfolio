@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Obstacle Dodge - A Game by Nathanieal Sandipurti">
+  <meta name="theme-color" content="#0c0c0c">
+  <title>Obstacle Dodge | Nathanieal Sandipurti</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="../../index.html" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../../index.html#home" class="nav-link">Home</a>
+      <a href="../../index.html#highlights" class="nav-link">Highlights</a>
+      <a href="../../index.html#about" class="nav-link">About</a>
+      <a href="../games.html" class="nav-link active">Games</a>
+      <a href="../../index.html#projects" class="nav-link">Projects</a>
+      <div class="nav-dropdown">
+        <a class="nav-link">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="../resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="../academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="../studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="../contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="game-hero" style="background-image: url('../../assets/images/games/Obstacle Dodge/Obstacle Dodge (1).png'); background-color: #2e1a47; background-position: center;">
+    <div class="game-hero-content">
+      <a href="../games.html" style="position: fixed; top: 90px; right: 20px; z-index: 999; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.2rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); text-decoration: none; font-size: 0.9rem; color: #fff; transition: background 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.3);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.5)'"><i class="fas fa-arrow-left"></i> Back to Games</a>
+      <h1 class="game-hero-title">Obstacle Dodge</h1>
+      <div class="game-hero-tags">
+        <span class="amy-card-tag">Unity</span>
+        <span class="amy-card-tag">C#</span>
+        <span class="amy-card-tag">Arcade</span>
+      </div>
+      <div class="game-hero-links">
+        <a href="https://nathanieal.itch.io/obstacle-dodge" target="_blank"><i class="fas fa-play"></i> Play Now</a>
+        <a href="https://github.com/Nathanieal06/Obstacle_Dodge" class="secondary-link" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== QUICK FACTS ========== -->
+  <section class="game-quick-facts">
+    <div class="game-quick-facts-inner">
+      <div class="game-fact">
+        <span class="game-fact-label">Role</span>
+        <span class="game-fact-value">Sole Developer</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Team Size</span>
+        <span class="game-fact-value">1</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Engine</span>
+        <span class="game-fact-value">Unity 6 (6000.3.11f1)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Platform</span>
+        <span class="game-fact-value">PC</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Status</span>
+        <span class="game-fact-value">Prototype</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OVERVIEW & CONTRIBUTION ========== -->
+  <section class="game-section">
+    <h2>Overview</h2>
+    <p>
+      Obstacle Dodge is a fast-paced arcade dodge game prototype. The player must avoid obstacles that drop from above, fly homing toward them, and spin. With multiple obstacle types featuring varied movement patterns, the game tracks score over time utilizing a simple, colorful visual style.
+    </p>
+
+    <h2>Your Contribution</h2>
+    <p>
+      This prototype focused on maximizing code reuse through Unity's component architecture:
+    </p>
+    <ul>
+      <li><strong>Obstacle Archetypes via Component Composition:</strong> Designed multiple distinct obstacle behaviors (Dropper, FlyingAtPlayer, Mover, Spinner) as completely separate, tiny <code>MonoBehaviour</code> scripts that can be mixed and matched on prefabs without inheritance chains.</li>
+      <li><strong>Homing Obstacles:</strong> Implemented <code>FlyingAtPlayer</code>, caching the player's Transform and using <code>Vector3.MoveTowards</code> to persistently track the player over time.</li>
+      <li><strong>Color Palette System:</strong> Created a scalable color theming system using a Colors asset folder to dynamically swap palette materials and keep the visuals interesting with minimal art requirements.</li>
+      <li><strong>Hit Response & Scorer:</strong> Developed the collision response triggers and time-based score tracking system.</li>
+    </ul>
+  </section>
+
+  <!-- ========== MEDIA GALLERY ========== -->
+  <section class="game-section">
+    <h2>Media & Iteration</h2>
+    <div class="game-media-grid">
+      <img src="../../assets/images/games/Obstacle Dodge/Obstacle Dodge (1).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Obstacle Dodge/Obstacle Dodge (2).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Obstacle Dodge/Obstacle Dodge (3).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Obstacle Dodge/Obstacle Dodge (4).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <div style="grid-column: 1 / -1; width: 100%; aspect-ratio: 16/9;">
+        <iframe width="100%" height="100%" style="border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);" src="https://www.youtube.com/embed/wOtE9Bp585g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECHNICAL DEEP DIVE ========== -->
+  <section class="game-section">
+    <h2>Technical Deep-Dive</h2>
+    <h3>Multiple Obstacle Archetypes via Composition</h3>
+    <p>
+      A dodge game needs interesting variety without creating large bloated obstacle classes. Each behavior was implemented as its own small <code>MonoBehaviour</code>. Unity's component model allows mixing behaviors on prefabs without inheritance chains — adding a <code>Spinner</code> and a <code>FlyingAtPlayer</code> script onto the same GameObject instantly creates a homing, spinning obstacle with zero extra code.
+    </p>
+    
+    <h3 style="margin-top: 2rem;">Homing Obstacle Logic</h3>
+    <p>
+      A homing obstacle needs to persistently update its direction toward a moving player. <code>FlyingAtPlayer</code> caches the player Transform reference on <code>Start()</code> and uses <code>Vector3.MoveTowards</code> (or <code>Vector3.Lerp</code>) each frame to smoothly close the distance, resulting in a relentless, curving flight path.
+    </p>
+  </section>
+
+  <!-- ========== POSTMORTEM ========== -->
+  <section class="game-section">
+    <h2>Postmortem / Lessons Learned</h2>
+    
+    <h3>What went well</h3>
+    <ul>
+      <li><strong>Component composition worked exactly as intended.</strong> Having each obstacle behavior as its own tiny script meant creating new obstacle variants was just a matter of combining components on a prefab — no code changes required. The homing spinner, for example, was created in the editor with no new scripting.</li>
+      <li><strong>The color system kept the game visually interesting with minimal art.</strong> Using a <code>Colors/</code> asset folder and swapping palette materials gave each session a different look without needing any additional art pipeline.</li>
+    </ul>
+
+    <h3>What I'd do differently</h3>
+    <ul>
+      <li><strong>Add version control and a build from the start.</strong> Without git history or a build, there's no way to see how the project evolved or to share a playable version without opening Unity. Even a basic GitHub repo and a WebGL build would make this instantly shareable.</li>
+      <li><strong>Add a difficulty curve and a proper game loop.</strong> The prototype has obstacles but no escalating spawn rate, no timer, and no clear win condition beyond avoiding hits. I'd define the full game loop.</li>
+    </ul>
+  </section>
+
+  <!-- ========== LINKS & CREDITS ========== -->
+  <section class="game-section">
+    <h2>Links & Credits</h2>
+    <ul class="game-credits">
+      <li><strong>Nathanieal Sandipurti:</strong> Sole Developer</li>
+      <li><strong>Source Code:</strong> <a href="https://github.com/Nathanieal06/Obstacle_Dodge" style="color: #4da6ff; text-decoration: underline; text-underline-offset: 3px;" target="_blank">[GitHub Link]</a></li>
+    </ul>
+  </section>
+  <!-- ========== PAGINATION ========== -->
+  <div class="amy-pagination-container">
+    <a href="unity-programming-test.html" class="amy-pagination-link prev">
+      <i class="fas fa-arrow-left"></i>
+      <div>
+        <span class="amy-pagination-link-subtitle">Previous</span>
+        <span class="amy-pagination-link-title">Tactical Game</span>
+      </div>
+    </a>
+    <a href="echo-the-paradox.html" class="amy-pagination-link next">
+      <div>
+        <span class="amy-pagination-link-subtitle">Next</span>
+        <span class="amy-pagination-link-title">Echo The Paradox</span>
+      </div>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer" style="margin-top: 5rem;">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/script.js"></script>
+</body>
+</html>

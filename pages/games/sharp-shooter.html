@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sharp Shooter - A Game by Nathanieal Sandipurti">
+  <meta name="theme-color" content="#0c0c0c">
+  <title>Sharp Shooter | Nathanieal Sandipurti</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="../../index.html" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../../index.html#home" class="nav-link">Home</a>
+      <a href="../../index.html#highlights" class="nav-link">Highlights</a>
+      <a href="../../index.html#about" class="nav-link">About</a>
+      <a href="../games.html" class="nav-link active">Games</a>
+      <a href="../../index.html#projects" class="nav-link">Projects</a>
+            <div class="nav-dropdown">
+        <a class="nav-link">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="../resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="../academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="../studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="../contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="game-hero" style="background-image: url('../../assets/images/games/Sharp Shooter/Sharp_Shooter_1.png'); background-color: #1c1c1c;">
+    <div class="game-hero-content">
+      <a href="../games.html" style="position: fixed; top: 90px; right: 20px; z-index: 999; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.2rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); text-decoration: none; font-size: 0.9rem; color: #fff; transition: background 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.3);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.5)'"><i class="fas fa-arrow-left"></i> Back to Games</a>
+      <h1 class="game-hero-title">Sharp Shooter</h1>
+      <div class="game-hero-tags">
+        <span class="amy-card-tag">Unity</span>
+        <span class="amy-card-tag">C#</span>
+        <span class="amy-card-tag">TPS</span>
+      </div>
+      <div class="game-hero-links">
+        <a href="#"><i class="fas fa-play"></i> Play Now</a>
+        <a href="#" class="secondary-link"><i class="fab fa-github"></i> GitHub Repo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== QUICK FACTS ========== -->
+  <section class="game-quick-facts">
+    <div class="game-quick-facts-inner">
+      <div class="game-fact">
+        <span class="game-fact-label">Role</span>
+        <span class="game-fact-value">Sole Developer</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Team Size</span>
+        <span class="game-fact-value">1</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Duration</span>
+        <span class="game-fact-value">May 2026</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Engine</span>
+        <span class="game-fact-value">Unity 6 (6000.3.11f1)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Platform</span>
+        <span class="game-fact-value">PC (Windows)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Status</span>
+        <span class="game-fact-value">Completed Prototype</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OVERVIEW & CONTRIBUTION ========== -->
+  <section class="game-section">
+    <h2>Overview</h2>
+    <p>
+      Sharp Shooter is a 3D third-person shooter where the player navigates a level, switches between weapons using a ScriptableObject-based weapon system, fights enemies (robots and turrets spawned from gates), and tracks ammo.
+    </p>
+
+    <h2>Your Contribution</h2>
+    <p>
+      As the sole developer, I architected the core combat loops and Enemy AI:
+    </p>
+    <ul>
+      <li><strong>ScriptableObject Weapon System:</strong> Developed a pure data-driven weapon architecture where weapon stats (damage, fire rate, ammo) are serialized on ScriptableObjects, completely decoupling logic from data so no code changes are required for new weapons.</li>
+      <li><strong>Enemy AI & Spawners:</strong> Implemented AI-driven robots with detection ranges and stationary turrets that track and fire at the player, as well as SpawnGates for interval-based enemy spawning.</li>
+      <li><strong>Projectiles & Combat Feedback:</strong> Handled physics-based projectiles with explosion VFX on impact.</li>
+      <li><strong>Damage Popup Floats:</strong> Built a satisfying floating damage number system that spawns TextMeshPro world-space text, rising from the hit position and fading out.</li>
+    </ul>
+  </section>
+
+  <!-- ========== MEDIA GALLERY ========== -->
+  <section class="game-section">
+    <h2>Media & Iteration</h2>
+    <div class="game-media-grid">
+      <img src="../../assets/images/games/Sharp Shooter/Sharp_Shooter_1.png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Sharp Shooter/Sharp_Shooter_2.png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Sharp Shooter/Sharp_Shooter_3.png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Sharp Shooter/Sharp_Shooter_4.png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <div style="grid-column: 1 / -1; width: 100%; aspect-ratio: 16/9;">
+        <iframe width="100%" height="100%" style="border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);" src="https://www.youtube.com/embed/CpXeMbwr5xY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECHNICAL DEEP DIVE ========== -->
+  <section class="game-section">
+    <h2>Technical Deep-Dive</h2>
+    <h3>ScriptableObject-Based Weapon Architecture</h3>
+    <p>
+      In a shooter, adding new weapons usually means duplicating code or hard-coding stats into scripts. I used <code>WeaponSO</code> to define all weapon stats as serialized fields on a ScriptableObject. <code>ActiveWeapon</code> reads the currently equipped SO's data for all firing logic. New weapons are created as <code>.asset</code> files — no code changes needed. Proper use of Unity's ScriptableObject pattern demonstrates an understanding of data-driven design that scales to large production games.
+    </p>
+
+    <h3 style="margin-top: 2rem;">Floating Damage Numbers</h3>
+    <p>
+      Combat needs visceral feedback — the player needs to feel like hits are connecting. <code>DamagePopup.cs</code> instantiates a world-space TextMeshPro canvas at the hit position, applies upward velocity to a <code>Vector3</code> offset over time, and fades <code>Color.a</code> to 0 before destroying the object. This minor addition makes combat feel dramatically more satisfying rather than silent stat changes.
+    </p>
+  </section>
+
+  <!-- ========== POSTMORTEM ========== -->
+  <section class="game-section">
+    <h2>Postmortem / Lessons Learned</h2>
+    
+    <h3>What went well</h3>
+    <ul>
+      <li><strong>The ScriptableObject weapon system was the right call.</strong> Defining weapons as data assets meant tweaking stats (damage, fire rate, ammo) never required touching code — pure inspector edits. It's a pattern I've carried into later projects for similar data.</li>
+      <li><strong>Floating damage numbers had a disproportionate impact on game feel.</strong> Adding <code>DamagePopup.cs</code> was a few hours of work, but it made combat feel dramatically more satisfying — hits felt real and impactful rather than silent stat changes.</li>
+    </ul>
+
+    <h3>What I'd do differently</h3>
+    <ul>
+      <li><strong>Implement the enemy death logic.</strong> <code>EnemyHealth.cs</code> has a <code>// TODO: Add death logic here</code> comment — death is currently not implemented. A proper death state (animation, loot drop, despawn) should have been part of the enemy system from the beginning.</li>
+      <li><strong>Upgrade to Cinemachine 3.x.</strong> This project uses Cinemachine 2.10.6 while all later projects use 3.x. Learning the new API would have been a worthwhile investment — the targeting and follow camera features in 3.x are significantly better, and migrating this project now would mean updating a lot of scene references.</li>
+    </ul>
+  </section>
+
+  <!-- ========== LINKS & CREDITS ========== -->
+  <section class="game-section">
+    <h2>Links & Credits</h2>
+    <ul class="game-credits">
+      <li><strong>Nathanieal Sandipurti:</strong> Sole Developer</li>
+      <li><strong>Third-Party Assets:</strong> StarterAssets, GDTV Sharp Shooter Assets, Game Of Squids</li>
+      <li><strong>Source Code:</strong> <a href="#" style="color: var(--primary);">[GitHub Link]</a></li>
+    </ul>
+  </section>
+  <!-- ========== PAGINATION ========== -->
+  <div class="amy-pagination-container">
+    <a href="unity-rpg.html" class="amy-pagination-link prev">
+      <i class="fas fa-arrow-left"></i>
+      <div>
+        <span class="amy-pagination-link-subtitle">Previous</span>
+        <span class="amy-pagination-link-title">Unity RPG</span>
+      </div>
+    </a>
+    <a href="royal-run.html" class="amy-pagination-link next">
+      <div>
+        <span class="amy-pagination-link-subtitle">Next</span>
+        <span class="amy-pagination-link-title">Royal Run</span>
+      </div>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer" style="margin-top: 5rem;">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

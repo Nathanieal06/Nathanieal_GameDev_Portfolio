@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nathanieal Sandipurti — Studying">
+  <meta content="#0c0c0c" name="theme-color">
+  <title>Nathanieal Sandipurti | Studying</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  
+  <style>
+    .course-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      text-align: left;
+    }
+    .course-card {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 300px;
+      max-width: 360px;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .course-card:hover {
+      transform: scale(1.02);
+    }
+    .course-img-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      background-color: #222;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .course-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .course-menu-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: #fff;
+      color: #000;
+      border-radius: 4px;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .course-card:hover .course-menu-btn {
+      opacity: 1;
+    }
+    .course-title {
+      color: #fff;
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 1.15rem;
+      line-height: 1.4;
+      margin-bottom: 0.4rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .course-instructor {
+      color: #9ca3af;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .progress-container {
+      width: 100%;
+      height: 8px;
+      background: #374151; /* Dark gray */
+      border-radius: 4px;
+      margin-bottom: 0.8rem;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      background: #8b5cf6; /* Vibrant purple */
+      border-radius: 4px;
+    }
+    .course-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      font-size: 0.85rem;
+      color: #d1d5db;
+      font-family: var(--font-sans);
+    }
+    .course-stars {
+      color: #f59e0b; /* Golden star color */
+      font-size: 0.9rem;
+      margin-bottom: 2px;
+    }
+    .rating-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .rating-text {
+      font-size: 0.75rem;
+      color: #9ca3af;
+    }
+    .start-course {
+      color: #d1d5db;
+      font-weight: 500;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body style="background-color: #0c0c0c;">
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../index.html" class="nav-link">Home</a>
+      <a href="../index.html#highlights" class="nav-link">Highlights</a>
+      <a href="../index.html#about" class="nav-link">About</a>
+      <a href="games.html" class="nav-link">Games</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <div class="nav-dropdown">
+        <span class="nav-link active">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></span>
+        <div class="nav-dropdown-menu">
+          <a href="resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== STUDYING SECTION ========== -->
+  <section class="amy-games-section">
+    <div class="amy-games-header" style="position: relative; overflow: hidden;">
+      <!-- Video Background -->
+      <div class="hero-video" style="z-index: 0;">
+        <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+          <source src="../Video/StudingPage.mp4" type="video/mp4">
+        </video>
+      </div>
+      <!-- Glass Overlay -->
+      <div class="hero-overlay" style="z-index: 1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
+      
+      <!-- Content -->
+      <div style="position: relative; z-index: 2;">
+        <h1>STUDYING</h1>
+        <p>CURRENTLY LEARNING.</p>
+      </div>
+    </div>
+
+    <div class="amy-games-body">
+      <h2 class="amy-section-title">MY LEARNING</h2>
+      
+      <div class="course-grid">
+        
+        <!-- Course 1 -->
+        <a href="https://www.udemy.com/share/106CC63@PwfBg1Zp10dRi6mSXSqEhdbrP5BowmSJIocZHtyJKw647cDYQdi5VntvBnDQZT7b0Q==/" target="_blank" class="course-card">
+          <div class="course-img-container">
+            <img src="../assets/images/studing/3rd%20Person%20Combat%20System%20for%20an%20RPG%20in%20Unity.png" alt="Unity 3rd Person Combat & Traversal" class="course-img">
+            <div class="course-menu-btn"><i class="fas fa-ellipsis-v"></i></div>
+          </div>
+          <h3 class="course-title">Unity 3rd Person Combat & Traversal</h3>
+          <p class="course-instructor">GameDev.tv Team, Nathan Farrer (aka Dapper Dino)</p>
+          
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 44%;"></div>
+          </div>
+          
+          <div class="course-meta">
+            <span>44% complete</span>
+            <div class="rating-container">
+              <div class="course-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+              </div>
+              <span class="rating-text">Your rating</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Course 2 -->
+        <a href="https://www.udemy.com/share/101Wey3@jWcszrR8SdUF8AcaVCk2dV8Mz4vE25RQHCUOD_ZV9Wtd6SuywIkf5qLqNkTC0YqT1w==/" target="_blank" class="course-card">
+          <div class="course-img-container">
+            <img src="../assets/images/studing/Complete%20C%23%20Unity%203D%20Game%20Development%20in%20Unity%206.png" alt="Complete C# Unity 3D Game Development in Unity 6" class="course-img">
+            <div class="course-menu-btn"><i class="fas fa-ellipsis-v"></i></div>
+          </div>
+          <h3 class="course-title">Complete C# Unity 3D Game Development in Unity 6</h3>
+          <p class="course-instructor">Rick Davidson, GameDev.tv Team, Stephen Hubbard</p>
+          
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 99%;"></div>
+          </div>
+          
+          <div class="course-meta">
+            <span>99% complete</span>
+            <div class="rating-container">
+              <div class="course-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <span class="rating-text">Your rating</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Course 3 -->
+        <a href="https://www.udemy.com/share/101WSe3@40TqAZne2CJ2kKLHu4_qSKKdtfqROSiFDbD4kWSYsy0GtzXcxJ8uN7s_-2eDLOpAvw==/" target="_blank" class="course-card">
+          <div class="course-img-container">
+            <img src="../assets/images/studing/RPG%20Core%20Combat%20Creator%20Learn%20Intermediate%20Unity%20C%23%20Coding.png" alt="RPG Core Combat Creator: Learn Intermediate Unity C# Coding" class="course-img">
+            <div class="course-menu-btn"><i class="fas fa-ellipsis-v"></i></div>
+          </div>
+          <h3 class="course-title">RPG Core Combat Creator: Learn Intermediate Unity C# Coding</h3>
+          <p class="course-instructor">Ben Tristem, Rick Davidson, GameDev.tv Team</p>
+          
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 0%;"></div>
+          </div>
+          
+          <div class="course-meta">
+            <span class="start-course">START COURSE</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer" style="margin-top: 0;">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      </div>
+      <p class="footer__copy">&copy; 2025 Nathanieal Sandipurti</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CityScape - A Game by Nathanieal Sandipurti">
+  <meta name="theme-color" content="#0c0c0c">
+  <title>CityScape | Nathanieal Sandipurti</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="../../index.html" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../../index.html#home" class="nav-link">Home</a>
+      <a href="../../index.html#highlights" class="nav-link">Highlights</a>
+      <a href="../../index.html#about" class="nav-link">About</a>
+      <a href="../games.html" class="nav-link active">Games</a>
+      <a href="../../index.html#projects" class="nav-link">Projects</a>
+            <div class="nav-dropdown">
+        <a class="nav-link">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="../resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="../academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="../studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="../contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="game-hero" style="background-image: url('../../assets/images/games/CityScape/Image (1).png'); background-color: #2b3a4a;">
+    <div class="game-hero-content">
+      <a href="../games.html" style="position: fixed; top: 90px; right: 20px; z-index: 999; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.2rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); text-decoration: none; font-size: 0.9rem; color: #fff; transition: background 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.3);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.5)'"><i class="fas fa-arrow-left"></i> Back to Games</a>
+      <h1 class="game-hero-title">CityScape</h1>
+      <div class="game-hero-tags">
+        <span class="amy-card-tag">Unity</span>
+        <span class="amy-card-tag">C#</span>
+        <span class="amy-card-tag">Simulation</span>
+      </div>
+      <div class="game-hero-links">
+        <a href="#"><i class="fas fa-play"></i> Play Now</a>
+        <a href="https://github.com/Nathanieal06/CityScape" class="secondary-link" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== QUICK FACTS ========== -->
+  <section class="game-quick-facts">
+    <div class="game-quick-facts-inner">
+      <div class="game-fact">
+        <span class="game-fact-label">Role</span>
+        <span class="game-fact-value">Sole Developer / Designer</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Team Size</span>
+        <span class="game-fact-value">1</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Duration</span>
+        <span class="game-fact-value">~3 weeks (July 2026)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Engine</span>
+        <span class="game-fact-value">Unity 6 (6000.3.11f1)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Platform</span>
+        <span class="game-fact-value">PC (Windows)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Status</span>
+        <span class="game-fact-value">In Development (Internship Project)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OVERVIEW & CONTRIBUTION ========== -->
+  <section class="game-section">
+    <h2>Overview</h2>
+    <p>
+      CityScape – Mini City Builder is a grid-based city building simulation with a switchable 3D exploration mode. Players place buildings from categories (Residential, Industrial, Utility, Services, Decoration), draw roads with auto-tiling, manage a simple economy, and can walk through their city in Explore Mode with NPC dialogue.
+    </p>
+
+    <h2>Your Contribution</h2>
+    <p>
+      As the sole developer, I built all systems from scratch:
+    </p>
+    <ul>
+      <li><strong>Grid System (Core):</strong> Created a 2D array of GridCell objects representing the world grid, providing world-to-grid coordinate conversion, occupancy tracking, and visualization. Event-driven design keeps downstream systems decoupled.</li>
+      <li><strong>Building Placement:</strong> Implemented a full ghost-preview workflow, validate, place, and delete functionality. The BuildingPlacer orchestrates raycasting, transparent ghosts, highlighted footprint quads, and legality checks.</li>
+      <li><strong>Road Placement with Auto-Tiling:</strong> Built a click-drag road drawing system. Roads automatically select their tile variant (straight, corner, T-junction, 4-way, dead-end) based on neighbor connections, using ghost pool reuse to prevent excessive GC during drag preview.</li>
+      <li><strong>Economy Manager:</strong> Tracks currency, income, expenses, and building costs. Fully event-driven, subscribing to building placement and removal events.</li>
+      <li><strong>Save / Load System:</strong> Designed a 3-slot persistent save/load system with auto-save that serializes entire city states (grid data, placed buildings, roads, economy) to JSON.</li>
+      <li><strong>Explore Mode:</strong> Created a seamless toggle between a top-down Build Mode and a 3D walk-around Explore Mode. Coordinated camera, input, UI, and NPC systems.</li>
+    </ul>
+  </section>
+
+  <!-- ========== MEDIA GALLERY ========== -->
+  <section class="game-section">
+    <h2>Media & Iteration</h2>
+    <div class="game-media-grid">
+      <!-- Add GIFs and Images here. Using placeholders as requested -->
+      <img src="../../assets/images/games/CityScape/Image (1).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/CityScape/Image (2).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/CityScape/Image (3).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/CityScape/Image (4).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <div style="grid-column: 1 / -1; width: 100%; aspect-ratio: 16/9; margin-top: 1rem;">
+        <iframe width="100%" height="100%" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);" src="https://www.youtube.com/embed/lqCyv1AHZl8" title="CityScape Gameplay Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECHNICAL DEEP DIVE ========== -->
+  <section class="game-section">
+    <h2>Technical Deep-Dive</h2>
+    <h3>Road Auto-Tiling via Neighbor Bitmask</h3>
+    <p>
+      When placing roads, each tile must automatically choose the correct visual variant (straight, corner, T-junction, 4-way, dead-end) and rotation based on which of its 4 neighbors are also roads. <code>RoadTileSelector.cs</code> queries the road dictionary for all 4 cardinal neighbors, builds a connection pattern, and uses a lookup to determine the correct prefab variant and Y-axis rotation. Drag-draw preview uses a ghost pool so no GC allocations occur during cursor movement.
+    </p>
+    <pre style="background: #111; padding: 1rem; border-radius: 4px; overflow-x: auto; color: #569cd6; font-family: monospace;">
+// RoadPlacer.cs — Road dictionary and events
+public event Action&lt;bool&gt; OnRoadModeChanged;
+public event Action&lt;GridCoordinates&gt; OnRoadPlaced;
+public event Action&lt;GridCoordinates&gt; OnRoadRemoved;
+
+private readonly Dictionary&lt;GridCoordinates, PlacedRoad&gt; _placedRoads
+    = new Dictionary&lt;GridCoordinates, PlacedRoad&gt;();
+
+// Ghost pool reuse during drag preview — avoids GC
+private List&lt;GameObject&gt; _ghostPool       = new List&lt;GameObject&gt;();
+private bool             _isDraggingPlacement;
+private List&lt;GridCoordinates&gt; _currentPreviewPath = new List&lt;GridCoordinates&gt;();
+    </pre>
+
+    <h3 style="margin-top: 2rem;">3-Slot JSON Save System with Auto-Save</h3>
+    <p>
+      Persisting an entire city — potentially hundreds of placed objects with grid coordinates, building types, and road networks — across sessions, with 3 independent slots and metadata. <code>SaveManager</code> serializes <code>GameSaveData</code> to JSON via <code>JsonUtility</code>. Saves go to <code>persistentDataPath/Saves/</code>. A coroutine fires auto-save on a timed interval. Slot metadata (timestamp, city name) is stored separately for the save slot UI.
+    </p>
+    <pre style="background: #111; padding: 1rem; border-radius: 4px; overflow-x: auto; color: #569cd6; font-family: monospace;">
+// SaveManager.cs
+public const int MaxSlots = 3;
+private const string SaveFileName = "slot_{0}.json";
+private const string MetaFileName = "slot_{0}_meta.json";
+
+[SerializeField] private bool  autoSaveEnabled         = true;
+[SerializeField] private float autoSaveIntervalMinutes = 5f;
+
+public event Action&lt;int&gt;             OnSaveCompleted;
+public event Action&lt;int, GameSaveData&gt; OnLoadCompleted;
+public event Action&lt;int&gt;             OnSaveDeleted;
+    </pre>
+  </section>
+
+  <!-- ========== POSTMORTEM ========== -->
+  <section class="game-section">
+    <h2>Postmortem / Lessons Learned</h2>
+    
+    <h3>What went well</h3>
+    <ul>
+      <li><strong>Modular system design paid off.</strong> Building the grid system, placement, road placer, and economy as separate decoupled classes (communicating via C# events) meant I could develop and test each independently without breaking the others.</li>
+      <li><strong>Road auto-tiling worked first time.</strong> The neighbor-bitmask approach for choosing road tile variants was the most complex algorithm in the project, and it worked correctly from the first full playthrough — validating the upfront planning invested before writing code.</li>
+    </ul>
+
+    <h3>What I'd do differently</h3>
+    <ul>
+      <li><strong>Split the large classes earlier.</strong> <code>BuildingPlacer.cs</code> (552 lines) and <code>RoadPlacer.cs</code> (652 lines) became difficult to navigate. I'd extract the drag-preview and ghost-pool logic into their own classes from day one rather than letting them grow inside the placer.</li>
+      <li><strong>Add version control from the start of each feature, not in weekly batches.</strong> With only 7 commits across 3 weeks, individual features aren't traceable in git history. Committing at feature-level boundaries would make the development story much clearer.</li>
+    </ul>
+  </section>
+
+  <!-- ========== LINKS & CREDITS ========== -->
+  <section class="game-section">
+    <h2>Links & Credits</h2>
+    <ul class="game-credits">
+      <li><strong>Nathanieal Sandipurti:</strong> Sole Developer</li>
+      <li><strong>Third-Party Assets:</strong> BOKI Low-Poly Nature, Toon Suburban Pack, Layer Lab, Polyperfect</li>
+      <li><strong>Source Code:</strong> <a href="https://github.com/Nathanieal06/CityScape" target="_blank" style="color: #4da6ff; text-decoration: underline; text-underline-offset: 3px;">GitHub Repository</a></li>
+    </ul>
+  </section>
+  <!-- ========== PAGINATION ========== -->
+  <div class="amy-pagination-container">
+    <a href="zatun-zombie.html" class="amy-pagination-link prev">
+      <i class="fas fa-arrow-left"></i>
+      <div>
+        <span class="amy-pagination-link-subtitle">Previous</span>
+        <span class="amy-pagination-link-title">Zatun Zombie Game</span>
+      </div>
+    </a>
+    <a href="unity-rpg.html" class="amy-pagination-link next">
+      <div>
+        <span class="amy-pagination-link-subtitle">Next</span>
+        <span class="amy-pagination-link-title">Unity RPG</span>
+      </div>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer" style="margin-top: 5rem;">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

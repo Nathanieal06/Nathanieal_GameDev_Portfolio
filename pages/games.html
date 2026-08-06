@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nathanieal Sandipurti — Games Portfolio.">
+  <meta name="keywords" content="Portfolio, Game Developer, GameDev, Nathanieal Sandipurti">
+  <meta name="author" content="Nathanieal Sandipurti">
+  <meta content="#0c0c0c" name="theme-color">
+
+  <title>Nathanieal Sandipurti | Games</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body style="background-color: #0c0c0c;">
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../index.html" class="nav-link">Home</a>
+      <a href="../index.html#highlights" class="nav-link">Highlights</a>
+      <a href="../index.html#about" class="nav-link">About</a>
+      <a href="games.html" class="nav-link active">Games</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+            <div class="nav-dropdown">
+        <a class="nav-link">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== GAMES SECTION ========== -->
+  <section class="amy-games-section">
+    <div class="amy-games-header" style="position: relative; overflow: hidden;">
+      <!-- Video Background -->
+      <div class="hero-video" style="z-index: 0;">
+        <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+          <source src="../Video/GameIntro.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-overlay" style="z-index: 1;"></div>
+      
+      <!-- Content -->
+      <div style="position: relative; z-index: 2;">
+        <h1>GAMES</h1>
+        <p>CLICK ON A GAME TO READ MORE.</p>
+        
+        <div class="amy-icon-key">
+          <div class="amy-icon-key-item"><i class="fas fa-hammer"></i> <span>Work In Progress</span></div>
+          <div class="amy-icon-key-item"><i class="fas fa-play"></i> <span>Playable Build</span></div>
+          <div class="amy-icon-key-item"><i class="fab fa-git-alt"></i> <span>Public Repository</span></div>
+          <div class="amy-icon-key-item"><i class="fas fa-download"></i> <span>Downloadable</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="amy-games-body">
+      <!-- PROFESSIONAL GAMES -->
+      <h2 id="professional" class="amy-section-title">PROFESSIONAL GAMES</h2>
+      <div class="amy-games-grid">
+        
+        <!-- Legacy of Dharma -->
+        <a href="games/legacy-of-dharma.html" class="amy-card">
+          <div class="amy-card-img-container">
+            <img src="../assets/images/games/legacy-of-dharma/Legacy of Dharma (1).png" alt="Legacy of Dharma" class="amy-card-img">
+          </div>
+          <div class="amy-card-content">
+            <h3 class="amy-card-title">Legacy of Dharma</h3>
+            <p class="amy-card-date">Present</p>
+            <div class="amy-card-tags">
+              <span class="amy-card-tag">Unity</span>
+              <span class="amy-card-tag">C#</span>
+              <span class="amy-card-tag">RPG</span>
+            </div>
+            <i class="fas fa-hammer amy-card-icon" title="Work in Progress"></i>
+          </div>
+        </a>
+
+        <!-- Zatun Zombie Game -->
+        <a href="games/zatun-zombie.html" class="amy-card">
+          <div class="amy-card-img-container">
+            <img src="../assets/images/games/Zatun Zombie Game/Zombie_Gamplay (1).png" alt="Zatun Zombie Game" class="amy-card-img">
+          </div>
+          <div class="amy-card-content">
+            <h3 class="amy-card-title">Zatun Zombie Game</h3>
+            <p class="amy-card-date">2023</p>
+            <div class="amy-card-tags">
+              <span class="amy-card-tag">Unity 6</span>
+              <span class="amy-card-tag">URP</span>
+              <span class="amy-card-tag">C#</span>
+            </div>
+            <i class="fas fa-play amy-card-icon" title="Playable Build"></i>
+          </div>
+        </a>
+
+        <!-- CityScape -->
+        <a href="games/cityscape.html" class="amy-card">
+          <div class="amy-card-img-container">
+            <img src="../assets/images/games/CityScape/Image (1).png" alt="CityScape" class="amy-card-img">
+          </div>
+          <div class="amy-card-content">
+            <h3 class="amy-card-title">CityScape</h3>
+            <p class="amy-card-date">2026</p>
+            <div class="amy-card-tags">
+              <span class="amy-card-tag">Unity</span>
+              <span class="amy-card-tag">C#</span>
+              <span class="amy-card-tag">Simulation</span>
+            </div>
+            <i class="fas fa-hammer amy-card-icon" title="Work in Progress"></i>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- PERSONAL GAMES -->
+      <h2 id="personal" class="amy-section-title">PERSONAL GAMES</h2>
+      <div class="amy-games-grid">
+        
+        <!-- Unity RPG -->
+        <a href="games/unity-rpg.html" class="amy-card">
+          <div class="amy-card-img-container">
+            <img src="../assets/images/games/Unity RPG/Unity RPG (1).png" alt="Unity RPG" class="amy-card-img">
+          </div>
+          <div class="amy-card-content">
+            <h3 class="amy-card-title">Unity RPG</h3>
+            <p class="amy-card-date">2022</p>
+            <div class="amy-card-tags">
+              <span class="amy-card-tag">Unity 3D</span>
+              <span class="amy-card-tag">RPG Mechanics</span>
+              <span class="amy-card-tag">C#</span>
+            </div>
+            <i class="fas fa-play amy-card-icon" title="Playable Build"></i>
+          </div>
+        </a>
+
+        <!-- Sharp Shooter -->
+        <a href="games/sharp-shooter.html" class="amy-card">
+          <div class="amy-card-img-container">
+            <img src="../assets/images/games/Sharp Shooter/Sharp_Shooter_1.png" alt="Sharp Shooter" class="amy-card-img">
+          </div>
+          <div class="amy-card-content">
+            <h3 class="amy-card-title">Sharp Shooter</h3>
+            <p class="amy-card-date">Game Jam</p>
+            <div class="amy-card-tags">
+              <span class="amy-card-tag">Unity 3D</span>
+              <span class="amy-card-tag">FPS</span>
+              <span class="amy-card-tag">C#</span>
+            </div>
+            <i class="fas fa-play amy-card-icon" title="Playable Build"></i>
+          </div>
+        </a>
+
+        <!-- Royal Run -->
+        <a href="games/royal-run.html" class="amy-card">
+          <div class="amy-card-img-container">
+            <img src="../assets/images/games/Royal Run/Royal_Run_1.png" alt="Royal Run" class="amy-card-img">
+          </div>
+          <div class="amy-card-content">
+            <h3 class="amy-card-title">Royal Run</h3>
+            <p class="amy-card-date">Game Jam</p>
+            <div class="amy-card-tags">
+              <span class="amy-card-tag">Unity 3D</span>
+              <span class="amy-card-tag">Endless Runner</span>
+              <span class="amy-card-tag">C#</span>
+            </div>
+            <i class="fas fa-play amy-card-icon" title="Playable Build"></i>
+          </div>
+        </a>
+
+        <!-- Galaxy Strike -->
+        <a href="games/galaxy-strike.html" class="amy-card">
+          <div class="amy-card-img-container">
+            <img src="../assets/images/games/Galaxy Strike/Galaxy_Strike_1.png" alt="Galaxy Strike" class="amy-card-img">
+          </div>
+          <div class="amy-card-content">
+            <h3 class="amy-card-title">Galaxy Strike</h3>
+            <p class="amy-card-date">Game Jam</p>
+            <div class="amy-card-tags">
+              <span class="amy-card-tag">Unity 3D</span>
+              <span class="amy-card-tag">Space Shooter</span>
+              <span class="amy-card-tag">C#</span>
+            </div>
+            <i class="fas fa-play amy-card-icon" title="Playable Build"></i>
+          </div>
+        </a>
+
+        <!-- Rocket Boost -->
+        <a href="games/rocket-boost.html" class="amy-card">
+          <div class="amy-card-img-container">
+            <img src="../assets/images/games/Rocket Boost/Rocket_Boost (1).png" alt="Rocket Boost" class="amy-card-img">
+          </div>
+          <div class="amy-card-content">
+            <h3 class="amy-card-title">Rocket Boost</h3>
+            <p class="amy-card-date">Game Jam</p>
+            <div class="amy-card-tags">
+              <span class="amy-card-tag">Unity 3D</span>
+              <span class="amy-card-tag">Platformer</span>
+              <span class="amy-card-tag">C#</span>
+            </div>
+            <i class="fas fa-play amy-card-icon" title="Playable Build"></i>
+          </div>
+        </a>
+
+
+        <!-- Grid-Based Tactical Game -->
+        <a href="games/unity-programming-test.html" class="amy-card">
+          <div class="amy-card-img-container">
+            <img src="../assets/images/games/Grid-Based Tactical Game/Image (1).png" alt="Tactical Game" class="amy-card-img">
+          </div>
+          <div class="amy-card-content">
+            <h3 class="amy-card-title">Grid-Based Tactical Game</h3>
+            <p class="amy-card-date">2026</p>
+            <div class="amy-card-tags">
+              <span class="amy-card-tag">Unity</span>
+              <span class="amy-card-tag">C#</span>
+              <span class="amy-card-tag">Tactical</span>
+            </div>
+            <i class="fas fa-code amy-card-icon" title="Assessment"></i>
+          </div>
+        </a>
+
+        <!-- Obstacle Dodge -->
+        <a href="games/obstacle-dodge.html" class="amy-card">
+          <div class="amy-card-img-container">
+            <img src="../assets/images/games/Obstacle Dodge/Obstacle Dodge (1).png" alt="Obstacle Dodge" class="amy-card-img">
+          </div>
+          <div class="amy-card-content">
+            <h3 class="amy-card-title">Obstacle Dodge</h3>
+            <p class="amy-card-date">Prototype</p>
+            <div class="amy-card-tags">
+              <span class="amy-card-tag">Unity</span>
+              <span class="amy-card-tag">C#</span>
+              <span class="amy-card-tag">Arcade</span>
+            </div>
+            <i class="fas fa-play amy-card-icon" title="Playable Build"></i>
+          </div>
+        </a>
+      </div>
+
+      <!-- GAMEJAMS -->
+      <h2 id="gamejams" class="amy-section-title">GAMEJAMS</h2>
+      <div class="amy-games-grid">
+        
+        <!-- Echo The Paradox -->
+        <a href="games/echo-the-paradox.html" class="amy-card">
+          <div class="amy-card-img-container">
+            <img src="../assets/images/games/Echo The Paradox/Echo The Paradox (1).png" alt="Echo The Paradox" class="amy-card-img">
+          </div>
+          <div class="amy-card-content">
+            <h3 class="amy-card-title">Echo The Paradox</h3>
+            <p class="amy-card-date" style="line-height: 1.4;">S.T.E.M Jam<br><span style="font-size: 0.85em; opacity: 0.8;">by GameDev Club IIT Guwahati</span></p>
+            <div class="amy-card-tags">
+              <span class="amy-card-tag">Unity</span>
+              <span class="amy-card-tag">C#</span>
+              <span class="amy-card-tag">Solo</span>
+            </div>
+            <i class="fas fa-play amy-card-icon" title="Playable Build"></i>
+          </div>
+        </a>
+
+        <!-- LastStride -->
+        <a href="games/last-stride.html" class="amy-card">
+          <div class="amy-card-img-container">
+            <img src="../assets/images/games/LastStride/Last Stride (1).png" alt="LastStride" class="amy-card-img">
+          </div>
+          <div class="amy-card-content">
+            <h3 class="amy-card-title">LastStride</h3>
+            <p class="amy-card-date" style="line-height: 1.4;">Indie Connect Game Jam #1 – The Beginning<br><span style="font-size: 0.85em; opacity: 0.8;">by GDAI Game Connect</span></p>
+            <div class="amy-card-tags">
+              <span class="amy-card-tag">Unity</span>
+              <span class="amy-card-tag">Survival</span>
+              <span class="amy-card-tag">C#</span>
+            </div>
+            <i class="fas fa-gamepad amy-card-icon" title="Playable"></i>
+          </div>
+        </a>
+
+        <!-- SIH Village Map -->
+        <a href="games/sih-village-map.html" class="amy-card">
+          <div class="amy-card-img-container">
+            <img src="../assets/images/games/SIH Village Map/SIH Map (1).png" alt="SIH Village Map" class="amy-card-img">
+          </div>
+          <div class="amy-card-content">
+            <h3 class="amy-card-title">SIH Village Map</h3>
+            <p class="amy-card-date" style="line-height: 1.4;">Smart India Hackathon (SIH)</p>
+            <div class="amy-card-tags">
+              <span class="amy-card-tag">Unity 3D</span>
+              <span class="amy-card-tag">Level Design</span>
+            </div>
+            <i class="fas fa-image amy-card-icon" title="Showcase"></i>
+          </div>
+        </a>
+
+        <!-- The Secret Book -->
+        <a href="https://zimension3d.com/shrt/1mnU8z" target="_blank" class="amy-card">
+          <div class="amy-card-img-container">
+            <img src="../assets/images/games/The Secret Book/Serect Book (1).jpg" alt="The Secret Book" class="amy-card-img">
+          </div>
+          <div class="amy-card-content">
+            <h3 class="amy-card-title">The Secret Book</h3>
+            <p class="amy-card-date" style="line-height: 1.4;">ZIMENSION GAME JAM 2025</p>
+            <div class="amy-card-tags">
+              <span class="amy-card-tag">Zimension</span>
+              <span class="amy-card-tag">3D</span>
+              <span class="amy-card-tag">Web Game</span>
+            </div>
+            <i class="fas fa-play amy-card-icon" title="Playable Build"></i>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="amy-games-nav-container">
+      <div class="amy-games-nav">
+        <a href="#professional" class="amy-nav-item">Professional</a>
+        <a href="#personal" class="amy-nav-item">Personal</a>
+        <a href="#gamejams" class="amy-nav-item">Gamejams</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer" style="margin-top: 0;">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub" id="social-github"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn" id="social-linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Twitter" id="social-twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io" id="social-itchio"><i class="fab fa-itch-io"></i></a>
+      </div>
+      <p class="footer__copy">&copy; 2025 Nathanieal Sandipurti</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
+

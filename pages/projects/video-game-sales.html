@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Video Game Sales Analysis Project - Nathanieal Sandipurti">
+  <meta name="theme-color" content="#0c0c0c">
+  <title>Video Game Sales Analysis | Nathanieal Sandipurti</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="../../index.html" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../../index.html" class="nav-link">Home</a>
+      <a href="../../index.html#highlights" class="nav-link">Highlights</a>
+      <a href="../../index.html#about" class="nav-link">About</a>
+      <a href="../games.html" class="nav-link">Games</a>
+      <a href="../projects.html" class="nav-link active">Projects</a>
+            <div class="nav-dropdown">
+        <a class="nav-link">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="../resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="../academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="../studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="../contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="game-hero" style="background-image: url('../../assets/images/Software%20Projects/Video_Game_Sales/vgsales.png'); background-color: #0c0c0c;">
+    <div class="game-hero-content">
+      <a href="../projects.html" style="position: fixed; top: 90px; right: 20px; z-index: 999; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.2rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); text-decoration: none; font-size: 0.9rem; color: #fff; transition: background 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.3);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.5)'"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+      <h1 class="game-hero-title">Video Game Sales Analysis</h1>
+      <div class="game-hero-tags">
+        <span class="amy-card-tag">Python</span>
+        <span class="amy-card-tag">Data Science</span>
+        <span class="amy-card-tag">AI/ML</span>
+      </div>
+      <div class="game-hero-links">
+        <a href="https://colab.research.google.com/drive/1fyK0GHrADk8orgJGRStAngwLhizbJzpO?usp=sharing" class="secondary-link" target="_blank"><i class="fas fa-code"></i> Google Colab</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== QUICK FACTS ========== -->
+  <section class="game-quick-facts">
+    <div class="game-quick-facts-inner">
+      <div class="game-fact">
+        <span class="game-fact-label">Role</span>
+        <span class="game-fact-value">Data Scientist</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Tech Stack</span>
+        <span class="game-fact-value">Python, Pandas, Seaborn</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">ML Models</span>
+        <span class="game-fact-value">Random Forest, Linear Regression</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Interface</span>
+        <span class="game-fact-value">Jupyter Notebook (Colab)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Status</span>
+        <span class="game-fact-value">Completed</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OVERVIEW & CONTRIBUTION ========== -->
+  <section class="game-section">
+    <h2>Overview</h2>
+    <p>
+      The Video Game Sales Analysis project is an exploratory data analysis (EDA) and predictive modeling pipeline built in Python. By analyzing a comprehensive dataset of over 16,000 video games, this project uncovers industry trends, genre popularity, and historical sales patterns across different regions (North America, Europe, Japan, and Global).
+    </p>
+
+    <h2>How I Built It</h2>
+    <p>
+      I built this pipeline within Google Colab, leveraging the standard data science ecosystem to extract insights and build predictive models:
+    </p>
+    <ul>
+      <li><strong>Data Cleaning & Processing:</strong> Utilized <code>pandas</code> to import the raw CSV dataset, identify missing values, drop invalid rows, and preprocess the categorical data (like Genres and Platforms).</li>
+      <li><strong>Exploratory Data Analysis (EDA):</strong> Implemented <code>matplotlib</code> and <code>seaborn</code> to visualize the distribution of game genres and calculate their total cumulative global sales. This helped identify which genres dominate the global market.</li>
+      <li><strong>Dimensionality Reduction:</strong> Integrated Principal Component Analysis (<code>PCA</code>) from Scikit-Learn to reduce feature complexity and identify the most impactful variables driving game sales.</li>
+      <li><strong>Predictive Modeling:</strong> Set up a regression pipeline using <code>OneHotEncoder</code> to handle categorical data and trained both <strong>Linear Regression</strong> and <strong>Random Forest Regressor</strong> models to forecast potential global sales based on historical data. Evaluated model performance using MSE, MAE, and R-squared metrics.</li>
+    </ul>
+
+    <h2>Features & Insights</h2>
+    <ul>
+      <li><strong>Market Trend Visualization:</strong> Automatically generates bar charts outlining the most lucrative genres in the video game industry. Action and Sports genres heavily dominate the dataset.</li>
+      <li><strong>Regional Analytics:</strong> Compares and contrasts sales figures from NA, EU, and JP regions against the global sum.</li>
+      <li><strong>Scalable Predictive Architecture:</strong> The notebook is structured to easily swap in new datasets or more complex regression models, making it a highly reusable tool for ongoing market analysis.</li>
+    </ul>
+  </section>
+
+  <!-- ========== HOW TO USE ========== -->
+  <section class="game-section">
+    <h2>How to View & Use</h2>
+    <p>
+      This project is hosted directly on Google Colab, allowing you to run the analysis and models in your browser without any local setup:
+    </p>
+    <pre style="background: #111; padding: 1rem; border-radius: 4px; overflow-x: auto; color: #569cd6; font-family: monospace;">
+# 1. Open the Google Colab Notebook link above
+# 2. Click on 'Runtime' -> 'Run all' to execute the cells
+# 3. Watch the data visualizations and model training happen in real-time!
+    </pre>
+  </section>
+
+  <!-- ========== POSTMORTEM ========== -->
+  <section class="game-section">
+    <h2>Postmortem / Lessons Learned</h2>
+    
+    <h3>What went well</h3>
+    <ul>
+      <li><strong>Data Visualization:</strong> Using Seaborn over standard Matplotlib made the graphs look significantly more modern and readable with very little overhead.</li>
+      <li><strong>Model Comparison:</strong> Pitting a standard Linear Regression model against a Random Forest Regressor provided excellent insights into how non-linear relationships in categorical data (like 'Platform' and 'Genre') impact sales predictions.</li>
+    </ul>
+
+    <h3>Drawbacks & Areas for Improvement</h3>
+    <ul>
+      <li><strong>Dataset Limitations:</strong> The dataset used covers historical sales, heavily skewing towards older generations (like the PS2 and Wii eras). Scraping modern, live data via an API (like IGDB) would drastically improve the relevance of the predictive models for today's market.</li>
+      <li><strong>Feature Engineering:</strong> Integrating review scores (e.g., Metacritic) or marketing budgets into the dataset would likely improve the R-squared score of the predictive models, as sales are heavily influenced by critical reception.</li>
+    </ul>
+  </section>
+
+  <!-- ========== LINKS & CREDITS ========== -->
+  <section class="game-section">
+    <h2>Links & Credits</h2>
+    <ul class="game-credits">
+      <li><strong>Nathanieal Sandipurti:</strong> Data Scientist / Developer</li>
+      <li><strong>Source Notebook:</strong> <a href="https://colab.research.google.com/drive/1fyK0GHrADk8orgJGRStAngwLhizbJzpO?usp=sharing" target="_blank" style="color: #4da6ff; text-decoration: underline; text-underline-offset: 3px;">Google Colab</a></li>
+    </ul>
+  </section>
+  <!-- ========== PAGINATION ========== -->
+  <div class="amy-pagination-container">
+    <a href="healthcare-chatbot.html" class="amy-pagination-link prev">
+      <i class="fas fa-arrow-left"></i>
+      <div>
+        <span class="amy-pagination-link-subtitle">Previous</span>
+        <span class="amy-pagination-link-title">Healthcare Chatbot</span>
+      </div>
+    </a>
+    <a href="image-classification.html" class="amy-pagination-link next">
+      <div>
+        <span class="amy-pagination-link-subtitle">Next</span>
+        <span class="amy-pagination-link-title">Image Classification</span>
+      </div>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer" style="margin-top: 5rem;">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      </div>
+      <p class="footer__copy">&copy; 2026 Nathanieal Sandipurti</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

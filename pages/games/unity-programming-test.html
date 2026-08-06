@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Grid-Based Tactical Game - A Project by Nathanieal Sandipurti">
+  <meta name="theme-color" content="#0c0c0c">
+  <title>Grid-Based Tactical Game | Nathanieal Sandipurti</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="../../index.html" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../../index.html#home" class="nav-link">Home</a>
+      <a href="../../index.html#highlights" class="nav-link">Highlights</a>
+      <a href="../../index.html#about" class="nav-link">About</a>
+      <a href="../games.html" class="nav-link active">Games</a>
+      <a href="../../index.html#projects" class="nav-link">Projects</a>
+            <div class="nav-dropdown">
+        <a class="nav-link">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="../resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="../academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="../studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="../contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+      <!-- ========== HERO ========== -->
+  <header class="game-hero" style="background-image: url('../../assets/images/games/Grid-Based Tactical Game/Image (1).png'); background-color: #1c352d;">
+    <div class="game-hero-content">
+      <a href="../games.html" style="position: fixed; top: 90px; right: 20px; z-index: 999; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.2rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); text-decoration: none; font-size: 0.9rem; color: #fff; transition: background 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.3);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.5)'"><i class="fas fa-arrow-left"></i> Back to Games</a>
+      <h1 class="game-hero-title">Grid-Based Tactical Game</h1>
+      <div class="game-hero-tags">
+        <span class="amy-card-tag">Unity</span>
+        <span class="amy-card-tag">C#</span>
+        <span class="amy-card-tag">Tactical</span>
+      </div>
+      <div class="game-hero-links">
+        <a href="https://github.com/Nathanieal06/Nathanieal_Unity_Programming_Test" class="secondary-link" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== QUICK FACTS ========== -->
+  <section class="game-quick-facts">
+    <div class="game-quick-facts-inner">
+      <div class="game-fact">
+        <span class="game-fact-label">Role</span>
+        <span class="game-fact-value">Sole Developer</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Team Size</span>
+        <span class="game-fact-value">1</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Duration</span>
+        <span class="game-fact-value">~2 days (July 2026)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Engine</span>
+        <span class="game-fact-value">Unity 6 (6000.3.7f1)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Platform</span>
+        <span class="game-fact-value">PC (Windows)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Status</span>
+        <span class="game-fact-value">Submitted Assignment</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OVERVIEW & CONTRIBUTION ========== -->
+  <section class="game-section">
+    <h2>Overview</h2>
+    <p>
+      This grid-based tactical game was built as a timed programming assessment submission. Player units and enemy units occupy a 3D grid. Enemy AI pathfinds toward the player using A*. A custom editor tool allows level designers to place obstacles on the grid without entering Play mode.
+    </p>
+
+    <h2>Your Contribution</h2>
+    <p>
+      Built under a strict 48-hour deadline, I implemented the following from scratch:
+    </p>
+    <ul>
+      <li><strong>A* Pathfinding System:</strong> Implemented a full A* algorithm with a Manhattan heuristic (optimal for 4-directional grids), handling obstacle avoidance and path retracing via parent pointers without relying on Unity's built-in NavMesh.</li>
+      <li><strong>Grid Manager:</strong> Developed the central grid system managing a 3D grid of Block cells, including walkability flags and neighbor lookup for pathfinding.</li>
+      <li><strong>Interface-Based AI:</strong> Designed an <code>IAI</code> interface contract to keep Enemy units decoupled from their pathfinding logic, allowing multiple AI behaviors to be easily swapped.</li>
+      <li><strong>Custom Editor Tooling:</strong> Went beyond the assessment brief by building an <code>ObstacleEditorWindow</code> (extending EditorWindow). This allows level designers to place obstacles on the grid during design-time without entering Play mode.</li>
+    </ul>
+  </section>
+
+  <!-- ========== MEDIA GALLERY ========== -->
+  <section class="game-section">
+    <h2>Media & Iteration</h2>
+    <div class="game-media-grid">
+      <img src="../../assets/images/games/Grid-Based Tactical Game/Image (1).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Grid-Based Tactical Game/Image (2).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Grid-Based Tactical Game/Image (3).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Grid-Based Tactical Game/Image (4).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+    </div>
+  </section>
+
+  <!-- ========== TECHNICAL DEEP DIVE ========== -->
+  <section class="game-section">
+    <h2>Technical Deep-Dive</h2>
+    <h3>A* Pathfinding from Scratch in 2 Days</h3>
+    <p>
+      Enemy units need to navigate a grid, avoiding obstacle cells, to reach the player — requiring a pathfinding algorithm built without external libraries. Using A* with a Manhattan heuristic, an open list with linear scan, a <code>HashSet</code> closed set, and path retracing, the algorithm correctly handles obstacle avoidance, edge traversal, and no-path scenarios. Implementing this correctly from memory during a timed assessment demonstrates strong algorithmic understanding.
+    </p>
+    <pre style="background: #111; padding: 1rem; border-radius: 4px; overflow-x: auto; color: #569cd6; font-family: monospace;">
+// Pathfinder.cs — A* core loop
+while (openList.Count &gt; 0) {
+    Node current = openList[0];
+    for (int i = 1; i &lt; openList.Count; i++)
+        if (openList[i].FCost &lt; current.FCost ||
+           (openList[i].FCost == current.FCost && openList[i].HCost &lt; current.HCost))
+            current = openList[i];
+
+    openList.Remove(current);
+    closedSet.Add(current.Block);
+    if (current.Block == goal) return RetracePath(startNode, current);
+    // ... neighbor expansion
+}
+
+// Manhattan distance — optimal heuristic for 4-directional grids
+private int GetDistance(Block a, Block b) =&gt;
+    Mathf.Abs(a.X - b.X) + Mathf.Abs(a.Z - b.Z);
+    </pre>
+
+    <h3 style="margin-top: 2rem;">Custom Editor Window for Obstacle Placement</h3>
+    <p>
+      Placing obstacles on the grid at design time without running the game was solved by writing custom Editor scripts. <code>ObstacleEditorWindow</code> extends <code>EditorWindow</code> to provide a panel in the Unity editor. <code>ObstacleManagerEditor</code> extends <code>Editor</code> with a custom inspector. New obstacles become pure design-time authoring, demonstrating Editor API knowledge beyond runtime code.
+    </p>
+  </section>
+
+  <!-- ========== POSTMORTEM ========== -->
+  <section class="game-section">
+    <h2>Postmortem / Lessons Learned</h2>
+    
+    <h3>What went well</h3>
+    <ul>
+      <li><strong>A* worked correctly on the first complete test.</strong> Having planned the open list, closed set, g-cost/h-cost structure, and Manhattan heuristic on paper before writing a single line meant the implementation came together quickly without major debugging.</li>
+      <li><strong>The custom editor window impressed beyond the brief.</strong> Building the <code>ObstacleEditorWindow</code> as a stretch goal — allowing level design without entering Play mode — demonstrated Editor API knowledge that wasn't required but added real value to the submission.</li>
+    </ul>
+
+    <h3>What I'd do differently</h3>
+    <ul>
+      <li><strong>Replace the linear open-list scan with a min-heap (priority queue).</strong> The current A* open list uses O(n) linear search to find the lowest-cost node. For large grids this becomes slow. A <code>SortedSet</code> or a proper min-heap would give O(log n) extraction and make the pathfinder scale to much larger maps.</li>
+      <li><strong>Use a proper state machine for enemy turns.</strong> The current <code>EnemyAI</code> is stateless — it just runs <code>FindPath</code> and moves. For a real tactical game I'd add turn phases (move → attack → end turn) using a state machine so the game loop is clearly defined and extensible.</li>
+    </ul>
+  </section>
+
+  <!-- ========== LINKS & CREDITS ========== -->
+  <section class="game-section">
+    <h2>Links & Credits</h2>
+    <ul class="game-credits">
+      <li><strong>Nathanieal Sandipurti:</strong> Sole Developer</li>
+      <li><strong>Third-Party Assets:</strong> GhostCharacter_Free, AurynSky Forest Pack, BOXOPHOBIC Skybox Cubemap Extended, Ladymito Free Cat</li>
+      <li><strong>Source Code:</strong> <a href="https://github.com/Nathanieal06/Nathanieal_Unity_Programming_Test" target="_blank" style="color: #4da6ff; text-decoration: underline; text-underline-offset: 3px;">GitHub Repository</a></li>
+    </ul>
+  </section>
+  <!-- ========== PAGINATION ========== -->
+  <div class="amy-pagination-container">
+    <a href="rocket-boost.html" class="amy-pagination-link prev">
+      <i class="fas fa-arrow-left"></i>
+      <div>
+        <span class="amy-pagination-link-subtitle">Previous</span>
+        <span class="amy-pagination-link-title">Rocket Boost</span>
+      </div>
+    </a>
+    <a href="obstacle-dodge.html" class="amy-pagination-link next">
+      <div>
+        <span class="amy-pagination-link-subtitle">Next</span>
+        <span class="amy-pagination-link-title">Obstacle Dodge</span>
+      </div>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer" style="margin-top: 5rem;">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

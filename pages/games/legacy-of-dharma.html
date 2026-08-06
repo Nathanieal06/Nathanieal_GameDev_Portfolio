@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Legacy of Dharma - A Game by Nathanieal Sandipurti">
+  <meta name="theme-color" content="#0c0c0c">
+  <title>Legacy of Dharma | Nathanieal Sandipurti</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="../../index.html" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../../index.html#home" class="nav-link">Home</a>
+      <a href="../../index.html#highlights" class="nav-link">Highlights</a>
+      <a href="../../index.html#about" class="nav-link">About</a>
+      <a href="../games.html" class="nav-link active">Games</a>
+      <a href="../../index.html#projects" class="nav-link">Projects</a>
+            <div class="nav-dropdown">
+        <a class="nav-link">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="../resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="../academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="../studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="../contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="game-hero" style="background-image: url('../../assets/images/games/legacy-of-dharma/Legacy of Dharma (1).png'); background-color: #0c0c0c;">
+    <div class="game-hero-content">
+      <a href="../games.html" style="position: fixed; top: 90px; right: 20px; z-index: 999; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.2rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); text-decoration: none; font-size: 0.9rem; color: #fff; transition: background 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.3);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.5)'"><i class="fas fa-arrow-left"></i> Back to Games</a>
+      <h1 class="game-hero-title">Legacy of Dharma</h1>
+      <div class="game-hero-tags">
+        <span class="amy-card-tag">Unity</span>
+        <span class="amy-card-tag">C#</span>
+        <span class="amy-card-tag">RPG</span>
+      </div>
+      <div class="game-hero-links">
+        <a href="#"><i class="fas fa-play"></i> Play Now</a>
+        <a href="https://github.com/Nathanieal06/PlayerController" class="secondary-link" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== QUICK FACTS ========== -->
+  <section class="game-quick-facts">
+    <div class="game-quick-facts-inner">
+      <div class="game-fact">
+        <span class="game-fact-label">Role</span>
+        <span class="game-fact-value">Lead Programmer</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Team Size</span>
+        <span class="game-fact-value">4 Students, 2 Mentors</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Duration</span>
+        <span class="game-fact-value">~2.5 Months (May - Jul 2026)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Engine</span>
+        <span class="game-fact-value">Unity 6000 (URP)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Platform</span>
+        <span class="game-fact-value">PC</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Status</span>
+        <span class="game-fact-value">In Development / Prototype</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OVERVIEW & CONTRIBUTION ========== -->
+  <section class="game-section">
+    <h2>Overview</h2>
+    <p>
+      Legacy of Dharma is a third-person action/adventure game featuring a dynamic two-state stance system that seamlessly bridges exploration and intense combat. The core hook lies in its multi-hit combo sword & shield mechanics and integrated horse riding, providing players with a AAA "snappy" feel that perfectly blends responsive movement with weighty, animation-driven strikes.
+    </p>
+
+    <h2>Your Contribution</h2>
+    <p>
+      As the Lead Programmer for this team project, my primary task was to architect and implement the core gameplay mechanics from scratch, specifically focusing on the player controller:
+    </p>
+    <ul>
+      <li><strong>Third-Person Player Controller:</strong> Built a custom state-machine approach driving Unity's CharacterController, reading from the new InputSystem. Added "Coyote Time" for precise jumping, i-frames during dodge rolls, and dynamic speed interpolation to blend script-driven physics with root-motion animation.</li>
+      <li><strong>Horse Riding & Mount System:</strong> Developed a seamless mount/dismount system using raycast detection. Managed complex parent/child transform relationships with LateUpdate snapping and Inverse Kinematics (IK) to dynamically lock the player's hands to the horse's moving reins without visual jitter.</li>
+      <li><strong>Combat & Damage Framework:</strong> Implemented a combo system that queues attacks based on input timing windows. Used event-driven weapon colliders that activate strictly during specific animation frames, and created dynamic AI reactions like stopping distance alterations when the player blocks.</li>
+      <li><strong>Enemy AI System (NavMesh):</strong> Abstracted an EnemyBase class to govern AI states (Idle, Patrol, Attack, Hit, Death) using Unity's NavMeshAgent. Built derived variants like BossEnemy and PatrolEnemy with logic for chasing, staggering, and dropping probabilistic loot.</li>
+    </ul>
+  </section>
+
+  <!-- ========== MEDIA GALLERY ========== -->
+  <section class="game-section">
+    <h2>Media & Iteration</h2>
+    <div class="game-media-grid">
+      <!-- Add GIFs and Images here -->
+      <img src="../../assets/images/games/legacy-of-dharma/Legacy of Dharma (2).png" alt="Legacy of Dharma Screenshot 1" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/legacy-of-dharma/Legacy of Dharma (3).png" alt="Legacy of Dharma Screenshot 2" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/legacy-of-dharma/Legacy of Dharma (4).png" alt="Legacy of Dharma Screenshot 3" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/legacy-of-dharma/Legacy of Dharma (5).png" alt="Legacy of Dharma Screenshot 4" style="width:100%; border-radius:8px;">
+      <div style="grid-column: 1 / -1; width: 100%; aspect-ratio: 16/9;">
+        <iframe width="100%" height="100%" style="border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);" src="https://www.youtube.com/embed/XOAHr7uRtYg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+    <p style="margin-top: 1.5rem; text-align: center;">
+      <a href="https://youtu.be/XOAHr7uRtYg" target="_blank" style="color: #4da6ff; text-decoration: underline;">Watch Full Video on YouTube</a>
+    </p>
+  </section>
+
+  <!-- ========== TECHNICAL DEEP DIVE ========== -->
+  <section class="game-section">
+    <h2>Technical Deep-Dive</h2>
+    <h3>Hybrid Root Motion Combat System</h3>
+    <p>
+      Standard CharacterController script-driven movement feels floaty during sword swings, but relying entirely on root motion makes basic exploration feel sluggish and unresponsive. To solve this, I decoupled the movement logic. During exploration, the script drives the CharacterController via WASD math. During an attack, script movement is suppressed, and <code>OnAnimatorMove</code> injects the animation's exact root displacement into the CharacterController. This keeps collisions active while the animation drives the distance, resulting in a AAA "snappy" feel that blends responsive movement with weighty combat strikes.
+    </p>
+    <pre style="background: #111; padding: 1rem; border-radius: 4px; overflow-x: auto; color: #569cd6; font-family: monospace;">
+private void OnAnimatorMove()
+{
+    if (_isDead || _controller == null || !_controller.enabled) return;
+
+    if (_isAttacking)
+    {
+        // Apply animation's root-motion displacement so attacks step forward naturally
+        Vector3 rootDelta = _animator.deltaPosition;
+        rootDelta.y = _verticalVelocity * Time.deltaTime; // Maintain gravity
+        _controller.Move(rootDelta);
+        transform.rotation *= _animator.deltaRotation;
+        
+        // Track targeted enemy dynamically mid-swing
+        if (_targetingSystem != null && _targetingSystem.IsTargeting) { /* ... */ }
+    }
+}
+    </pre>
+
+    <h3 style="margin-top: 2rem;">Robust Mount/Dismount & IK Reins System</h3>
+    <p>
+      When transitioning a player onto a moving horse, standard animation root motion often causes the player to drift away from the saddle, and hands rarely align with the reins. During mounting, the player's CharacterController is disabled, and they are parented to the horse. In <code>LateUpdate</code>, the player's local position/rotation is hard-locked to zero to prevent drift. Additionally, Unity's Avatar IK system forces the player's hands to track the horse's moving rein bones.
+    </p>
+    <pre style="background: #111; padding: 1rem; border-radius: 4px; overflow-x: auto; color: #569cd6; font-family: monospace;">
+void LateUpdate()
+{
+    if (isMounted && !isTransitioning)
+    {
+        // Lock player exactly to the saddle to prevent root motion drift
+        transform.localPosition = Vector3.zero;
+        
+        // Snap the horse's reins directly to the player's hands via IK targets
+        if (snapReinsToHands && currentHorse != null && playerAnimator.isHuman)
+        {
+            Transform leftHand = playerAnimator.GetBoneTransform(HumanBodyBones.LeftHand);
+            if (leftHand != null) currentHorse.leftReinBone.position = leftHand.position;
+        }
+    }
+}
+    </pre>
+  </section>
+
+  <!-- ========== POSTMORTEM ========== -->
+  <section class="game-section">
+    <h2>Postmortem / Lessons Learned</h2>
+    
+    <h3>What went well</h3>
+    <ul>
+      <li><strong>Hybrid Controller Architecture:</strong> Decoupling script-driven locomotion from animation-driven root motion in the ThirdPersonController was a major success. By overriding <code>OnAnimatorMove</code> exclusively during combat, I successfully combined highly responsive exploration controls with weighty, grounded sword strikes that don't slide across the floor.</li>
+      <li><strong>Complex Hierarchy & IK Management:</strong> The horse riding system required orchestrating multiple overlapping systems: temporarily disabling the Character Controller, managing dynamic transform parenting, and interpolating Inverse Kinematics (IK) for the reins. The resulting system transitions smoothly without visual jitter, demonstrating a strong grasp of Unity's execution order (e.g., enforcing local coordinate locking in <code>LateUpdate</code>).</li>
+      <li><strong>Dynamic Combat Framework:</strong> Centralizing the combat hit detection through overlapping bounds in <code>WeaponDamage.cs</code> and abstracting AI behavior in <code>EnemyBase.cs</code> made the combat loop highly modular. Features like block detection automatically adjusting the AI's stopping distance and specialized boss knockbacks were implemented cleanly without tightly coupling or bloating the scripts.</li>
+    </ul>
+
+    <h3>What I'd do differently</h3>
+    <ul>
+      <li><strong>Better Architecture Planning to Reduce Dead Code:</strong> The project contains redundant legacy scripts like <code>EnemyHealth.cs</code>, which holds an unfinished TODO for death logic, despite <code>EnemyBase.cs</code> ultimately taking over all health and loot functionality. In the future, I will outline my abstract base classes more thoroughly before prototyping to avoid leaving orphaned scripts in the final architecture.</li>
+      <li><strong>Commit History & Scope Management:</strong> The Git history for this project consists of an "Initial check-in" followed by four consecutive commits all simply titled "Final Version". This reflects the frantic rush of applying late-stage bug fixes right before the deadline rather than maintaining steady version control. Next time, I will adopt a strict branch-per-feature workflow with descriptive, atomic commits to ease deployment stress.</li>
+      <li><strong>Adopt Automated Testing:</strong> Because the project relies entirely on manual playtesting, verifying changes to the complex character state machine (combos, blocking, dodging, riding) became incredibly time-consuming and brittle. Implementing basic unit tests and adopting Test-Driven Development (TDD) for core state mechanics would significantly reduce manual QA overhead.</li>
+      <li><strong>Object Pooling for Late-Stage Pivots:</strong> Late in development, I pivoted to leaving enemy corpses in the world instead of despawning them (leaving commented-out <code>Destroy(gameObject, 3f)</code> calls in the code). While this improved immersion, I should have implemented an Object Pooling system to handle it, as endlessly persisting dead GameObjects can eventually bloat memory and clutter NavMesh pathing.</li>
+    </ul>
+  </section>
+
+  <!-- ========== LINKS & CREDITS ========== -->
+  <section class="game-section">
+    <h2>Links & Credits</h2>
+    <ul class="game-credits">
+      <li><strong>Nathanieal Sandipurti:</strong> Lead Programmer</li>
+      <li><strong>Mohit Pipaliya:</strong> UI/UX Designer, Level & Environment Designer</li>
+      <li><strong>Jaymin Patel:</strong> Sound Designer & Animator</li>
+      <li><strong>Amit Shah:</strong> Character Designer</li>
+      <li><strong>Prof. Taral Patel:</strong> Faculty Guide</li>
+      <li><strong>Prof. Hiral Desai (HOD):</strong> Academic Oversight</li>
+      <li><strong>Third-Party Assets:</strong> Malbers Animations, Unity Technologies</li>
+      <li><strong>Source Code:</strong> <a href="https://github.com/Nathanieal06/PlayerController" target="_blank" style="color: #4da6ff; text-decoration: underline; text-underline-offset: 3px;">GitHub Repository</a></li>
+    </ul>
+  </section>
+  <!-- ========== PAGINATION ========== -->
+  <div class="amy-pagination-container">
+    <a href="../games.html" class="amy-pagination-link prev" style="border-color: rgba(255,255,255,0.2);">
+      <i class="fas fa-th-large"></i>
+      <div>
+        <span class="amy-pagination-link-subtitle">Return</span>
+        <span class="amy-pagination-link-title">Back to Games</span>
+      </div>
+    </a>
+    <a href="zatun-zombie.html" class="amy-pagination-link next">
+      <div>
+        <span class="amy-pagination-link-subtitle">Next</span>
+        <span class="amy-pagination-link-title">Zatun Zombie Game</span>
+      </div>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer" style="margin-top: 5rem;">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

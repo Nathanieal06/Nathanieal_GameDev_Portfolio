@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rocket Boost - A Game by Nathanieal Sandipurti">
+  <meta name="theme-color" content="#0c0c0c">
+  <title>Rocket Boost | Nathanieal Sandipurti</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="../../index.html" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../../index.html#home" class="nav-link">Home</a>
+      <a href="../../index.html#highlights" class="nav-link">Highlights</a>
+      <a href="../../index.html#about" class="nav-link">About</a>
+      <a href="../games.html" class="nav-link active">Games</a>
+      <a href="../../index.html#projects" class="nav-link">Projects</a>
+            <div class="nav-dropdown">
+        <a class="nav-link">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="../resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="../academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="../studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="../contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="game-hero" style="background-image: url('../../assets/images/games/Rocket Boost/Rocket_Boost (1).png'); background-color: #1c1c1c;">
+    <div class="game-hero-content">
+      <a href="../games.html" style="position: fixed; top: 90px; right: 20px; z-index: 999; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.2rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); text-decoration: none; font-size: 0.9rem; color: #fff; transition: background 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.3);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.5)'"><i class="fas fa-arrow-left"></i> Back to Games</a>
+      <h1 class="game-hero-title">Rocket Boost</h1>
+      <div class="game-hero-tags">
+        <span class="amy-card-tag">Unity</span>
+        <span class="amy-card-tag">C#</span>
+        <span class="amy-card-tag">Physics Platformer</span>
+      </div>
+      <div class="game-hero-links">
+        <a href="https://nathanieal.itch.io/rocket-boost" target="_blank"><i class="fas fa-play"></i> Play Now</a>
+        <a href="https://github.com/Nathanieal06/Rocket_Boost" class="secondary-link" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== QUICK FACTS ========== -->
+  <section class="game-quick-facts">
+    <div class="game-quick-facts-inner">
+      <div class="game-fact">
+        <span class="game-fact-label">Role</span>
+        <span class="game-fact-value">Sole Developer</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Team Size</span>
+        <span class="game-fact-value">1</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Duration</span>
+        <span class="game-fact-value">Game Jam</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Engine</span>
+        <span class="game-fact-value">Unity 6 (6000.3.11f1)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Platform</span>
+        <span class="game-fact-value">PC (Windows)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Status</span>
+        <span class="game-fact-value">Completed Prototype</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OVERVIEW & CONTRIBUTION ========== -->
+  <section class="game-section">
+    <h2>Overview</h2>
+    <p>
+      Rocket Boost is a physics-based 3D platformer where the player controls a rocket that must thrust and rotate to reach landing pads while avoiding obstacles. Crashing restarts the level, landing on the pad advances to the next, and oscillating hazards add difficulty along the way.
+    </p>
+
+    <h2>Your Contribution</h2>
+    <p>
+      Based on course material, I built the following core systems:
+    </p>
+    <ul>
+      <li><strong>Physics-Based Movement:</strong> Implemented thrust-based rocket movement utilizing a hybrid model — applying physical <code>Rigidbody</code> force for momentum and drift while retaining direct transform manipulation for crisp, responsive rotation.</li>
+      <li><strong>Collision Handler:</strong> Developed a tag-based collision state machine that distinguishes between ignoring friendly objects, advancing on landing pads, or triggering a crash.</li>
+      <li><strong>Oscillating Obstacles:</strong> Created moving hazards utilizing sine-based calculations to seamlessly move objects between points each frame.</li>
+      <li><strong>VFX Systems:</strong> Integrated thrust particle exhaust and impact explosion VFX based on input and physics triggers.</li>
+    </ul>
+  </section>
+
+  <!-- ========== MEDIA GALLERY ========== -->
+  <section class="game-section">
+    <h2>Media & Iteration</h2>
+    <div class="game-media-grid">
+      <img src="../../assets/images/games/Rocket Boost/Rocket_Boost (1).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Rocket Boost/Rocket_Boost (2).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Rocket Boost/Rocket_Boost (3).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Rocket Boost/Rocket_Boost (4).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <div style="grid-column: 1 / -1; width: 100%; aspect-ratio: 16/9;">
+        <iframe width="100%" height="100%" style="border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);" src="https://www.youtube.com/embed/k7k62pPmDG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+    </section>
+
+  <!-- ========== TECHNICAL DEEP DIVE ========== -->
+  <section class="game-section">
+    <h2>Technical Deep-Dive</h2>
+    <h3>Physics Thrust + Transform Rotation Hybrid</h3>
+    <p>
+      A rocket needs to feel physically heavy and responsive. Pure physics for both movement and rotation feels uncontrollable; a character controller feels too direct. <code>Rigidbody.AddRelativeForce()</code> governs thrust so momentum and drift behave physically. Rotation is applied directly to <code>transform</code> (not physics) so turning feels crisp and immediately responsive while thrust remains realistic. This hybrid is a common pattern for satisfying spacecraft controls.
+    </p>
+
+    <h3 style="margin-top: 2rem;">Tag-Based Collision State Machine</h3>
+    <p>
+      The rocket needs three collision behaviors: ignore friendly objects, advance on landing pad, crash on everything else. <code>CollisionHandler.cs</code> branches in <code>OnCollisionEnter</code> on <code>collision.gameObject.tag</code> — "Friendly" = ignore, "Finish" = load next scene, everything else = crash + respawn. It's minimal, readable, and does exactly one thing.
+    </p>
+  </section>
+
+  <!-- ========== POSTMORTEM ========== -->
+  <section class="game-section">
+    <h2>Postmortem / Lessons Learned</h2>
+    
+    <h3>What went well</h3>
+    <ul>
+      <li><strong>Physics balance:</strong> The hybrid movement model felt much better than purely physics-driven rotation.</li>
+      <li><strong>Level flow:</strong> Simple mechanics allowed for engaging level design.</li>
+    </ul>
+
+    <h3>What I'd do differently</h3>
+    <ul>
+      <li><strong>Better checkpoints:</strong> Add intermediate checkpoints to larger levels.</li>
+    </ul>
+  </section>
+
+  <!-- ========== LINKS & CREDITS ========== -->
+  <section class="game-section">
+    <h2>Links & Credits</h2>
+    <ul class="game-credits">
+      <li><strong>Nathanieal Sandipurti:</strong> Sole Developer</li>
+      <li><strong>Source Code:</strong> <a target="_blank" href="https://github.com/Nathanieal06/Rocket_Boost" style="color: #4da6ff; text-decoration: underline; text-underline-offset: 3px;">[GitHub Link]</a></li>
+    </ul>
+  </section>
+  <!-- ========== PAGINATION ========== -->
+  <div class="amy-pagination-container">
+    <a href="galaxy-strike.html" class="amy-pagination-link prev">
+      <i class="fas fa-arrow-left"></i>
+      <div>
+        <span class="amy-pagination-link-subtitle">Previous</span>
+        <span class="amy-pagination-link-title">Galaxy Strike</span>
+      </div>
+    </a>
+    <a href="unity-programming-test.html" class="amy-pagination-link next">
+      <div>
+        <span class="amy-pagination-link-subtitle">Next</span>
+        <span class="amy-pagination-link-title">Tactical Game</span>
+      </div>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer" style="margin-top: 5rem;">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

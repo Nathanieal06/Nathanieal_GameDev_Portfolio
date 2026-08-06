@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Echo: The Paradox - A Game by Nathanieal Sandipurti">
+  <meta name="theme-color" content="#0c0c0c">
+  <title>Echo: The Paradox | Nathanieal Sandipurti</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="../../index.html" class="nav-brand" id="nav-brand">Nathanieal</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../../index.html#home" class="nav-link">Home</a>
+      <a href="../../index.html#highlights" class="nav-link">Highlights</a>
+      <a href="../../index.html#about" class="nav-link">About</a>
+      <a href="../games.html" class="nav-link active">Games</a>
+      <a href="../../index.html#projects" class="nav-link">Projects</a>
+            <div class="nav-dropdown">
+        <a class="nav-link">More <i class="fas fa-chevron-down" style="font-size:0.7em; margin-left:2px;"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="../resume.html" class="nav-dropdown-item">Resume</a>
+          <a href="../academics.html" class="nav-dropdown-item">Academics</a>
+          <a href="../studying.html" class="nav-dropdown-item">Studying</a>
+          <a href="../contact.html" class="nav-dropdown-item">Contact</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="game-hero" style="background-image: url('../../assets/images/games/Echo The Paradox/Echo The Paradox (1).png'); background-color: #1a1a1a;">
+    <div class="game-hero-content">
+      <a href="../games.html" style="position: fixed; top: 90px; right: 20px; z-index: 999; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.2rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); text-decoration: none; font-size: 0.9rem; color: #fff; transition: background 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.3);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.5)'"><i class="fas fa-arrow-left"></i> Back to Games</a>
+      <h1 class="game-hero-title">Echo: The Paradox</h1>
+      <div class="game-hero-tags">
+        <span class="amy-card-tag">Unity</span>
+        <span class="amy-card-tag">C#</span>
+        <span class="amy-card-tag">Narrative</span>
+      </div>
+      <div class="game-hero-links">
+        <a href="https://nathanieal.itch.io/echo-the-paradox" target="_blank"><i class="fas fa-play"></i> Download Build</a>
+        <a href="#" class="secondary-link"><i class="fab fa-github"></i> GitHub Repo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== QUICK FACTS ========== -->
+  <section class="game-quick-facts">
+    <div class="game-quick-facts-inner">
+      <div class="game-fact">
+        <span class="game-fact-label">Role</span>
+        <span class="game-fact-value">Sole Developer / Narrative Designer</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Team Size</span>
+        <span class="game-fact-value">1</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Engine</span>
+        <span class="game-fact-value">Unity 6 (6000.3.11f1)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Platform</span>
+        <span class="game-fact-value">PC (Windows)</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Status</span>
+        <span class="game-fact-value">Released</span>
+      </div>
+      <div class="game-fact">
+        <span class="game-fact-label">Game Jam</span>
+        <span class="game-fact-value">S.T.E.M Jam (GameDev Club IIT Guwahati)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OVERVIEW & CONTRIBUTION ========== -->
+  <section class="game-section">
+    <h2>Overview</h2>
+    <p>
+      Echo: The Paradox is a first-person narrative adventure and walking simulator set across 4 acts. The player responds to a radio distress call, interacts with objects and NPCs, makes story choices, and experiences a mystery narrative. There is a strong emphasis on atmosphere, dialogue, interactables, and scripted sequences.
+    </p>
+
+    <h2>Your Contribution</h2>
+    <p>
+      As the sole developer, I implemented the game's architecture and narrative systems:
+    </p>
+    <ul>
+      <li><strong>4-Act Narrative Structure:</strong> Divided the game into 4 separate Unity scenes (each ~74MB with fully baked GI). Each act has its own sequence manager and objective tracker utilizing coroutines to manage timed event sequences.</li>
+      <li><strong>Interactable Object System:</strong> Created a generic interaction system using an <code>IInteractable</code> interface, completely decoupling the player raycasting logic from concrete interactables like doors, chests, and radios.</li>
+      <li><strong>Dialogue / Conversation System:</strong> Integrated a branching dialogue system using DialogueEditor, with timed delays between conversation phases, ambient audio, and story choice tracking that persists across acts.</li>
+      <li><strong>Layered Audio & UI:</strong> Layered radio SFX, ambient static, and dialogue audio simultaneously, and managed all UI states through a central UIManager.</li>
+      <li><strong>Scene Transitions:</strong> Built smooth fade-to-black scene transitions with title cards using async loading to mask load times between the large baked scenes.</li>
+    </ul>
+  </section>
+
+  <!-- ========== MEDIA GALLERY ========== -->
+  <section class="game-section">
+    <h2>Media & Iteration</h2>
+    <div class="game-media-grid">
+      <!-- Fixed screenshot links -->
+      <img src="../../assets/images/games/Echo The Paradox/Echo The Paradox (2).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Echo The Paradox/Echo The Paradox (3).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Echo The Paradox/Echo The Paradox (4).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <img src="../../assets/images/games/Echo The Paradox/Echo The Paradox (5).png" alt="Screenshot" style="width:100%; border-radius:8px;">
+      <div style="grid-column: 1 / -1; width: 100%; aspect-ratio: 16/9; margin-top: 1rem;">
+        <iframe width="100%" height="100%" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);" src="https://www.youtube.com/embed/kXeRPmwOhJU" title="Echo The Paradox Gameplay Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECHNICAL DEEP DIVE ========== -->
+  <section class="game-section">
+    <h2>Technical Deep-Dive</h2>
+    <h3>Coroutine-Based Scripted Story Sequences</h3>
+    <p>
+      A narrative game requires scripted sequences where events happen in a specific order with precise timing — radio plays, player reads map, dialogue fires, scene transitions after delay — without a visual scripting tool. Each act has a dedicated sequence manager using Unity coroutines. <code>DialogueSequenceManager</code> tracks a sequence step int and advances through states as the player completes objectives.
+    </p>
+    <pre style="background: #111; padding: 1rem; border-radius: 4px; overflow-x: auto; color: #569cd6; font-family: monospace;">
+// DialogueSequenceManager.cs — Sequence orchestration
+[Header("Conversations")]
+[SerializeField] private NPCConversation radioConvo01;
+[SerializeField] private NPCConversation radioConvo02;
+[SerializeField] private NPCConversation radioResponseConvo;
+
+[Header("Sequence Delays")]
+[SerializeField] private float delayBeforeConvo02    = 10f;
+[SerializeField] private float delayBeforeResponse   = 15f;
+
+[Header("Scene Transition & Effects")]
+[SerializeField] private string nextSceneName        = "Act02";
+[SerializeField] private Image  fadePanel;
+[SerializeField] private string fadeTitleText        = "Act 02: The Rescue";
+[SerializeField] private float  fadeDuration         = 2f;
+    </pre>
+
+    <h3 style="margin-top: 2rem;">Interface-Based Interactable System</h3>
+    <p>
+      Many object types (doors, chests, radios, beds, maps) all need to be interactable but behave completely differently. By using an <code>IInteractable</code> interface with a single <code>Interact()</code> method, <code>PlayerInteraction</code> only needs to know about the interface. It never references concrete types, meaning new interactable types can be added without touching the player code at all.
+    </p>
+    <pre style="background: #111; padding: 1rem; border-radius: 4px; overflow-x: auto; color: #569cd6; font-family: monospace;">
+// IInteractable.cs — Contract
+public interface IInteractable { void Interact(); }
+
+// PlayerInteraction.cs — Fully decoupled
+if (Physics.Raycast(ray, out hit, interactRange)) {
+    IInteractable interactable = hit.collider.GetComponent&lt;IInteractable&gt;();
+    if (interactable != null) interactable.Interact();
+}
+    </pre>
+  </section>
+
+  <!-- ========== POSTMORTEM ========== -->
+  <section class="game-section">
+    <h2>Postmortem / Lessons Learned</h2>
+    
+    <h3>What went well</h3>
+    <ul>
+      <li><strong>The interface-based interactable system scaled perfectly.</strong> Every new interactable type I added (radio, map, door, chest, bed) slotted in without touching <code>PlayerInteraction</code> once. The interface design paid off completely across 4 acts of content.</li>
+      <li><strong>The 4-act scene split kept things manageable.</strong> Each act being a completely independent scene meant I could open, edit, and test one act without worrying about breaking the others. No cross-scene bugs emerged during development.</li>
+    </ul>
+
+    <h3>What I'd do differently</h3>
+    <ul>
+      <li><strong>Use version control throughout development, not just at the end.</strong> Having a single "Initial check-in" commit means there's no git record of how the game evolved. I'd commit after each act, each feature, and each major fix so the development story is preserved.</li>
+      <li><strong>Use Unity Timeline or a node-based dialogue graph for the sequence managers.</strong> The coroutine-based sequence managers worked but were fragile to edit — changing the timing of one event sometimes broke subsequent steps. A visual sequencer would be far easier to iterate on during playtesting.</li>
+    </ul>
+  </section>
+
+  <!-- ========== LINKS & CREDITS ========== -->
+  <section class="game-section">
+    <h2>Links & Credits</h2>
+    <ul class="game-credits">
+      <li><strong>Nathanieal Sandipurti:</strong> Sole Developer / Narrative Designer</li>
+      <li><strong>Third-Party Assets:</strong> DialogueEditor (NPCConversation), Bitgem low-poly pack, AllSkyFree skyboxes, 80s Computer & Gaming Setup, StarterAssets</li>
+      <li><strong>Source Code:</strong> <a href="#" style="color: #4da6ff; text-decoration: underline; text-underline-offset: 3px;">[GitHub Link]</a></li>
+    </ul>
+  </section>
+  <!-- ========== PAGINATION ========== -->
+  <div class="amy-pagination-container">
+    <a href="obstacle-dodge.html" class="amy-pagination-link prev">
+      <i class="fas fa-arrow-left"></i>
+      <div>
+        <span class="amy-pagination-link-subtitle">Previous</span>
+        <span class="amy-pagination-link-title">Obstacle Dodge</span>
+      </div>
+    </a>
+    <a href="last-stride.html" class="amy-pagination-link next">
+      <div>
+        <span class="amy-pagination-link-subtitle">Next</span>
+        <span class="amy-pagination-link-title">LastStride</span>
+      </div>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer" style="margin-top: 5rem;">
+    <div class="container footer__inner">
+      <span class="footer__name">Nathanieal Sandipurti</span>
+      <div class="footer__links">
+        <a href="https://github.com/Nathanieal06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/nathanieal-sandipurti" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://nathanieal.itch.io/" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
