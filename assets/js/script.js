@@ -161,3 +161,31 @@
   });
 })();
 
+// ── YouTube Iframe API (Wait until playing to show video) ──
+;(function () {
+  const iframes = document.querySelectorAll('.hero-video iframe');
+  if (iframes.length === 0) return;
+
+  // Load the IFrame Player API code asynchronously.
+  const tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  const firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // This function creates an <iframe> (and YouTube player) after the API code downloads.
+  window.onYouTubeIframeAPIReady = function() {
+    iframes.forEach((iframe) => {
+      new YT.Player(iframe, {
+        events: {
+          'onStateChange': function(event) {
+            // YT.PlayerState.PLAYING = 1
+            if (event.data === 1) {
+              iframe.classList.add('video-ready');
+            }
+          }
+        }
+      });
+    });
+  };
+})();
+
