@@ -274,11 +274,19 @@ img { display: block; max-width: 100%; }
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 300%;
-  height: 300%;
+  width: 100vw;
+  height: 56.25vw;
+  min-height: 100vh;
+  min-width: 177.77vh;
   transform: translate(-50%, -50%);
   border: 0;
   pointer-events: none;
+  opacity: 0;
+  animation: iframeFadeIn 1s ease forwards 1.5s;
+}
+
+@keyframes iframeFadeIn {
+  to { opacity: 1; }
 }
 
 .hero-video video {
