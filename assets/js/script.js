@@ -125,27 +125,31 @@
     };
 
     try {
-      // NOTE: Update this URL for production if needed
-      const response = await fetch('http://localhost:5000/api/contact', {
+      // Web3Forms endpoint
+      // NOTE: Replace 'YOUR_ACCESS_KEY_HERE' with your actual Web3Forms access key from https://web3forms.com/
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          access_key: "e4061cda-ceb7-4b2b-b172-456296b9e38b",
+          name: formData.fullName,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        })
       });
 
       const data = await response.json();
 
-      if (response.ok && data.success) {
+      if (response.status === 200) {
         contactForm.style.display = 'none';
         if (successMsg) successMsg.style.display = 'block';
         contactForm.reset();
       } else {
-        throw new Error(
-          data.errors 
-            ? data.errors.map(err => err.msg).join('<br>') 
-            : data.message || 'Something went wrong.'
-        );
+        throw new Error(data.message || 'Something went wrong.');
       }
     } catch (error) {
       if (errorMsg) {
