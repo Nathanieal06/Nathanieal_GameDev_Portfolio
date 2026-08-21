@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/chatbot.css">
 </head>
 <body>
 
@@ -174,6 +175,34 @@
   </footer>
 
   <script src="../../assets/js/script.js"></script>
+
+  <!-- ========== CHATBOT (NATALIE) ========== -->
+  <div class="chat-widget">
+    <button class="chat-toggle" id="chatToggle" aria-label="Open Chat">
+      <i class="fas fa-comment-dots"></i>
+    </button>
+    <div class="chat-window" id="chatWindow">
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <div class="chat-avatar">N</div>
+          <div>
+            <div class="chat-title">Natalie</div>
+            <div class="chat-subtitle">Portfolio Assistant</div>
+          </div>
+        </div>
+        <button class="chat-close" id="chatClose" aria-label="Close Chat">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="chat-messages" id="chatMessages"></div>
+      <div class="chat-input-area">
+        <input type="text" class="chat-input" id="chatInput" placeholder="Ask me anything..." autocomplete="off">
+        <button class="chat-send" id="chatSend" aria-label="Send Message">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>  <script src="../../assets/js/chatbot.js"></script>
 </body>
 </html>
 
