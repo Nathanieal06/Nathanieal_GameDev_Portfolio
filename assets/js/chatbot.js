@@ -19,13 +19,33 @@
   // SITE NAVIGATION MAP
   // ---------------------------------------------------------------
   const SITE_PAGES = {
-    home:      { label: '🏠 Home',       url: '/' },
-    games:     { label: '🎮 Games',      url: 'pages/games.html' },
-    projects:  { label: '💡 Projects',   url: 'pages/projects.html' },
-    resume:    { label: '📄 Resume',     url: 'pages/resume.html' },
-    academics: { label: '🎓 Academics',  url: 'pages/academics.html' },
-    studying:  { label: '📚 Studying',   url: 'pages/studying.html' },
-    contact:   { label: '✉️ Contact',    url: 'pages/contact.html' },
+    // Main pages
+    home:      { label: '🏠 Home',            url: '/' },
+    games:     { label: '🎮 All Games',        url: 'pages/games.html' },
+    projects:  { label: '💡 All Projects',     url: 'pages/projects.html' },
+    resume:    { label: '📄 Resume',           url: 'pages/resume.html' },
+    academics: { label: '🎓 Academics',        url: 'pages/academics.html' },
+    studying:  { label: '📚 Studying',         url: 'pages/studying.html' },
+    contact:   { label: '✉️ Contact',          url: 'pages/contact.html' },
+
+    // Individual game pages
+    lastride:   { label: '🎮 LastStride',          url: 'pages/games/last-stride.html' },
+    legacy:     { label: '🎮 Legacy of Dharma',    url: 'pages/games/legacy-of-dharma.html' },
+    echo:       { label: '🎮 Echo The Paradox',    url: 'pages/games/echo-the-paradox.html' },
+    cityscape:  { label: '🎮 Cityscape',           url: 'pages/games/cityscape.html' },
+    galaxystrike: { label: '🎮 Galaxy Strike',     url: 'pages/games/galaxy-strike.html' },
+    obstacledodge: { label: '🎮 Obstacle Dodge',   url: 'pages/games/obstacle-dodge.html' },
+    rocketboost: { label: '🎮 Rocket Boost',       url: 'pages/games/rocket-boost.html' },
+    royalrun:   { label: '🎮 Royal Run',           url: 'pages/games/royal-run.html' },
+    zatun:      { label: '🎮 Zatun Zombie',        url: 'pages/games/zatun-zombie.html' },
+    sharpshooter: { label: '🎮 Sharp Shooter',     url: 'pages/games/sharp-shooter.html' },
+    unityrpg:   { label: '🎮 Unity RPG',           url: 'pages/games/unity-rpg.html' },
+
+    // Individual project pages
+    healthchatbot: { label: '💡 Healthcare Chatbot',    url: 'pages/projects/healthcare-chatbot.html' },
+    imgclassify:   { label: '💡 Image Classification', url: 'pages/projects/image-classification.html' },
+    irrigation:    { label: '💡 Smart Irrigation',     url: 'pages/projects/smart-irrigation.html' },
+    gamesales:     { label: '💡 Video Game Sales',     url: 'pages/projects/video-game-sales.html' },
   };
 
   // ---------------------------------------------------------------
@@ -38,11 +58,12 @@ FACTS ABOUT NATHANIEAL (use ONLY these facts — do not invent anything):
 - Role: Game Developer (student / indie dev)
 - Skills & tools he actually uses: Unity, C# (primary), game design, level design, narrative design
 - He does NOT use Blender or Unreal Engine
-- Games he has made: Legacy of Dharma, Echo The Paradox, LastStride
+- Games he has made: LastStride, Legacy of Dharma, Echo The Paradox, Cityscape, Galaxy Strike, Obstacle Dodge, Rocket Boost, Royal Run, Zatun Zombie, Sharp Shooter, Unity RPG
+- Projects he has made: Healthcare Chatbot, Image Classification, Smart Irrigation System, Video Game Sales Analysis
 - Email: nathasandipurti@gmail.com
 - He is actively seeking opportunities in game development
 - Portfolio website: https://nathanieal-game-dev-portfolio.vercel.app
-- Pages on the site: Home, Games, Projects, Resume, Academics, Studying, Contact
+- Pages on the site: Home, Games, Projects, Resume, Academics, Studying, Contact — each game and project also has its own dedicated page
 
 YOUR ONLY JOB is to answer questions about Nathanieal. You may also help visitors navigate the site.
 
@@ -69,8 +90,29 @@ STRICT RULES:
   ];
 
   // Keywords that trigger navigation suggestions
+  // Specific games/projects take priority over the general pages
   const NAV_TRIGGERS = {
-    games:     /\bgame(?:s)?\b|\blegacy of dharma\b|\becho\b|\blaststride\b/i,
+    // Specific games (checked first)
+    lastride:      /\blast.?stride\b/i,
+    legacy:        /\blegacy of dharma\b/i,
+    echo:          /\becho the paradox\b|\becho\b/i,
+    cityscape:     /\bcityscape\b/i,
+    galaxystrike:  /\bgalaxy.?strike\b/i,
+    obstacledodge: /\bobstacle.?dodge\b/i,
+    rocketboost:   /\brocket.?boost\b/i,
+    royalrun:      /\broyal.?run\b/i,
+    zatun:         /\bzatun\b|\bzombie\b/i,
+    sharpshooter:  /\bsharp.?shooter\b/i,
+    unityrpg:      /\bunity.?rpg\b/i,
+
+    // Specific projects
+    healthchatbot: /\bhealthcare.?chatbot\b/i,
+    imgclassify:   /\bimage.?classif/i,
+    irrigation:    /\birrigation\b/i,
+    gamesales:     /\bgame.?sales\b|\bvideo game sales\b/i,
+
+    // General pages (fallback if no specific match)
+    games:     /\bgame(?:s)?\b/i,
     projects:  /\bproject(?:s)?\b/i,
     resume:    /\bresume\b|\bcv\b|\bexperience\b/i,
     contact:   /\bcontact\b|\bemail\b|\bhire\b|\breach\b/i,
@@ -82,12 +124,25 @@ STRICT RULES:
     return OFF_TOPIC_PATTERNS.some(p => p.test(text));
   }
 
-  // Which page buttons to suggest based on user message
-  function getSuggestedPages(text) {
+  // Which page buttons to suggest based on user message AND bot reply
+  function getSuggestedPages(userText, botText) {
+    const combined = (userText + ' ' + (botText || '')).toLowerCase();
     const suggested = new Set();
+    const specificGameKeys = ['lastride','legacy','echo','cityscape','galaxystrike','obstacledodge','rocketboost','royalrun','zatun','sharpshooter','unityrpg'];
+    const specificProjectKeys = ['healthchatbot','imgclassify','irrigation','gamesales'];
+
     for (const [key, pattern] of Object.entries(NAV_TRIGGERS)) {
-      if (pattern.test(text)) suggested.add(key);
+      if (pattern.test(combined)) suggested.add(key);
     }
+
+    // If any specific game was matched, also add "All Games" as secondary
+    const hasSpecificGame = specificGameKeys.some(k => suggested.has(k));
+    if (hasSpecificGame) suggested.add('games');
+
+    // If any specific project was matched, also add "All Projects" as secondary
+    const hasSpecificProject = specificProjectKeys.some(k => suggested.has(k));
+    if (hasSpecificProject) suggested.add('projects');
+
     return [...suggested];
   }
 
@@ -184,8 +239,8 @@ STRICT RULES:
       addMessage(botReply, 'bot', true); // true = parse markdown
       conversationHistory.push({ role: "assistant", content: botReply });
 
-      // Suggest relevant page navigation buttons
-      const pages = getSuggestedPages(text);
+      // Suggest relevant page navigation buttons based on user question + bot answer
+      const pages = getSuggestedPages(text, botReply);
       if (pages.length > 0) addNavButtons(pages);
 
     } catch (error) {
