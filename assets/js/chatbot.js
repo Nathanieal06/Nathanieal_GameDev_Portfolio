@@ -16,36 +16,36 @@
   const initialMessage = "Hi! I'm Natalie, Nathanieal's personal assistant. Ask me anything about him, his games, or his projects — or use the quick links below!";
 
   // ---------------------------------------------------------------
-  // SITE NAVIGATION MAP
+  // SITE NAVIGATION MAP — use absolute paths so they work from ANY page depth
   // ---------------------------------------------------------------
   const SITE_PAGES = {
     // Main pages
     home:      { label: '🏠 Home',            url: '/' },
-    games:     { label: '🎮 All Games',        url: 'pages/games.html' },
-    projects:  { label: '💡 All Projects',     url: 'pages/projects.html' },
-    resume:    { label: '📄 Resume',           url: 'pages/resume.html' },
-    academics: { label: '🎓 Academics',        url: 'pages/academics.html' },
-    studying:  { label: '📚 Studying',         url: 'pages/studying.html' },
-    contact:   { label: '✉️ Contact',          url: 'pages/contact.html' },
+    games:     { label: '🎮 All Games',        url: '/pages/games.html' },
+    projects:  { label: '💡 All Projects',     url: '/pages/projects.html' },
+    resume:    { label: '📄 Resume',           url: '/pages/resume.html' },
+    academics: { label: '🎓 Academics',        url: '/pages/academics.html' },
+    studying:  { label: '📚 Studying',         url: '/pages/studying.html' },
+    contact:   { label: '✉️ Contact',          url: '/pages/contact.html' },
 
     // Individual game pages
-    lastride:   { label: '🎮 LastStride',          url: 'pages/games/last-stride.html' },
-    legacy:     { label: '🎮 Legacy of Dharma',    url: 'pages/games/legacy-of-dharma.html' },
-    echo:       { label: '🎮 Echo The Paradox',    url: 'pages/games/echo-the-paradox.html' },
-    cityscape:  { label: '🎮 Cityscape',           url: 'pages/games/cityscape.html' },
-    galaxystrike: { label: '🎮 Galaxy Strike',     url: 'pages/games/galaxy-strike.html' },
-    obstacledodge: { label: '🎮 Obstacle Dodge',   url: 'pages/games/obstacle-dodge.html' },
-    rocketboost: { label: '🎮 Rocket Boost',       url: 'pages/games/rocket-boost.html' },
-    royalrun:   { label: '🎮 Royal Run',           url: 'pages/games/royal-run.html' },
-    zatun:      { label: '🎮 Zatun Zombie',        url: 'pages/games/zatun-zombie.html' },
-    sharpshooter: { label: '🎮 Sharp Shooter',     url: 'pages/games/sharp-shooter.html' },
-    unityrpg:   { label: '🎮 Unity RPG',           url: 'pages/games/unity-rpg.html' },
+    lastride:   { label: '🎮 LastStride',          url: '/pages/games/last-stride.html' },
+    legacy:     { label: '🎮 Legacy of Dharma',    url: '/pages/games/legacy-of-dharma.html' },
+    echo:       { label: '🎮 Echo The Paradox',    url: '/pages/games/echo-the-paradox.html' },
+    cityscape:  { label: '🎮 Cityscape',           url: '/pages/games/cityscape.html' },
+    galaxystrike: { label: '🎮 Galaxy Strike',     url: '/pages/games/galaxy-strike.html' },
+    obstacledodge: { label: '🎮 Obstacle Dodge',   url: '/pages/games/obstacle-dodge.html' },
+    rocketboost: { label: '🎮 Rocket Boost',       url: '/pages/games/rocket-boost.html' },
+    royalrun:   { label: '🎮 Royal Run',           url: '/pages/games/royal-run.html' },
+    zatun:      { label: '🎮 Zatun Zombie',        url: '/pages/games/zatun-zombie.html' },
+    sharpshooter: { label: '🎮 Sharp Shooter',     url: '/pages/games/sharp-shooter.html' },
+    unityrpg:   { label: '🎮 Unity RPG',           url: '/pages/games/unity-rpg.html' },
 
     // Individual project pages
-    healthchatbot: { label: '💡 Healthcare Chatbot',    url: 'pages/projects/healthcare-chatbot.html' },
-    imgclassify:   { label: '💡 Image Classification', url: 'pages/projects/image-classification.html' },
-    irrigation:    { label: '💡 Smart Irrigation',     url: 'pages/projects/smart-irrigation.html' },
-    gamesales:     { label: '💡 Video Game Sales',     url: 'pages/projects/video-game-sales.html' },
+    healthchatbot: { label: '💡 Healthcare Chatbot',    url: '/pages/projects/healthcare-chatbot.html' },
+    imgclassify:   { label: '💡 Image Classification', url: '/pages/projects/image-classification.html' },
+    irrigation:    { label: '💡 Smart Irrigation',     url: '/pages/projects/smart-irrigation.html' },
+    gamesales:     { label: '💡 Video Game Sales',     url: '/pages/projects/video-game-sales.html' },
   };
 
   // ---------------------------------------------------------------
