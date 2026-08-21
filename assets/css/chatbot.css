@@ -232,3 +232,43 @@
     bottom: 70px;
   }
 }
+
+/* ── Navigation Buttons inside chat ── */
+.chat-nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 4px 0 6px;
+}
+
+.chat-nav-btn {
+  display: inline-block;
+  padding: 5px 11px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.72rem;
+  font-family: var(--font-sans);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+.chat-nav-btn:hover {
+  background: var(--text, #fff);
+  color: var(--bg, #111);
+  border-color: var(--text, #fff);
+}
+
+/* ── Markdown rendering inside bot bubbles ── */
+.chat-message.bot strong {
+  font-weight: 700;
+  color: #fff;
+}
+
+.chat-message.bot em {
+  font-style: italic;
+  opacity: 0.9;
+}
