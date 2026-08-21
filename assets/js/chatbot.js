@@ -74,7 +74,12 @@
       });
 
       if (!response.ok) {
-        throw new Error('API Error');
+        let errStr = 'API Error';
+        try {
+          const errData = await response.json();
+          if (errData.error) errStr = errData.error;
+        } catch(e) {}
+        throw new Error(errStr);
       }
 
       const data = await response.json();
@@ -91,7 +96,8 @@
       if (error.message === "Proxy not configured yet.") {
         addMessage("I'm currently in setup mode! Nathanieal is still configuring my secure brain. Please check back later, or email him at nathasandipurti@gmail.com in the meantime.", 'bot');
       } else {
-        addMessage("Sorry, I'm experiencing some technical difficulties right now. Please email Nathanieal at nathasandipurti@gmail.com", 'bot');
+        // Display the actual error from the backend to help with debugging
+        addMessage(`Oops! Backend says: ${error.message}`, 'bot');
       }
     } finally {
       chatSend.disabled = false;
